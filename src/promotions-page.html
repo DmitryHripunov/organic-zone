@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">Акции</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="page-section">
+        <div class="container">
+          <h1 class="title title_h1 title_indent-l">Акции</h1>
+
+          <div class="blog">
+            <ul class="blog__list">
+              <li class="blog__item blog__item_huge">
+                <a href="promotions-item-page.html" class="blog__link">
+                  <picture class="blog__picture blog__picture_huge">
+                    <source  srcset="${require('./assets/img/banners/hero.webp')}" type="image/webp">
+
+                    <img class="blog__img" src="${require('./assets/img/banners/inner-banner-2.jpg')}" alt="#">
+                  </picture>
+
+                  <span class="blog__date">14 декабря — 31 декабря</span>
+
+                  <h3 class="blog__heading">Новинка! Скрабы для тела</h3>
+                </a>
+              </li>
+<!-- 
+              <li class="blog__item blog__item_huge">
+                <a href="promotions-item-page.html" class="blog__link">
+                  <picture class="blog__picture blog__picture_huge">
+                    <source  srcset="${require('./assets/img/banners/inner-banner-2.jpg')}"
+                      type="image/webp">
+
+                    <img class="blog__img" src="${require('./assets/img/banners/hero.jpg')}" alt="#">
+                  </picture>
+
+                  <span class="blog__date">14 декабря — 31 декабря</span>
+
+                  <h3 class="blog__heading">Американские бренды: скидка до 20% на часть ассортимента</h3>
+                </a>
+              </li>
+
+              <li class="blog__item blog__item_huge">
+                <a href="promotions-item-page.html" class="blog__link">
+                  <picture class="blog__picture blog__picture_huge">
+                    <source  srcset="${require('./assets/img/banners/inner-banner-2.jpg')}"
+                      type="image/webp">
+
+                    <img class="blog__img" src="${require('./assets/img/banners/hero.jpg')}" alt="#">
+                  </picture>
+
+                  <span class="blog__date">14 декабря — 31 декабря</span>
+
+                  <h3 class="blog__heading">Американские бренды: скидка до 20% на часть ассортимента</h3>
+                </a>
+              </li>
+
+              <li class="blog__item blog__item_huge">
+                <a href="promotions-item-page.html" class="blog__link">
+                  <picture class="blog__picture blog__picture_huge">
+                    <source  srcset="${require('./assets/img/banners/hero.webp')}" type="image/webp">
+
+                    <img class="blog__img" src="${require('./assets/img/banners/inner-banner-2.jpg')}" alt="#">
+                  </picture>
+
+                  <span class="blog__date">14 декабря — 31 декабря</span>
+
+                  <h3 class="blog__heading">Новинка! Скрабы для тела</h3>
+                </a>
+              </li>
+
+              <li class="blog__item blog__item_huge">
+                <a href="promotions-item-page.html" class="blog__link">
+                  <picture class="blog__picture blog__picture_huge">
+                    <source  srcset="${require('./assets/img/banners/hero.webp')}" type="image/webp">
+
+                    <img class="blog__img" src="${require('./assets/img/banners/inner-banner-2.jpg')}" alt="#">
+                  </picture>
+
+                  <span class="blog__date">14 декабря — 31 декабря</span>
+
+                  <h3 class="blog__heading">Новинка! Скрабы для тела</h3>
+                </a>
+              </li> -->
+            </ul>
+
+            ${require('./common.blocks/pagination/pagination.html')}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

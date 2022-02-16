@@ -1,0 +1,70 @@
+@import (reference) "../../less/variables.less";
+
+.stars {
+	display: flex;
+	align-items: center;
+
+  &.stars_active_1 .stars__item:nth-child(1) {
+    background: svg-load('img/star_colored.svg') center / cover no-repeat;
+  }
+
+  &.stars_active_2 .stars__item:nth-child(-n+2) {
+    background: svg-load('img/star_colored.svg') center / cover no-repeat;
+  }
+
+  &.stars_active_3 .stars__item:nth-child(-n+3) {
+    background: svg-load('img/star_colored.svg') center / cover no-repeat;
+  }
+
+  &.stars_active_4 .stars__item:nth-child(-n+4) {
+    background: svg-load('img/star_colored.svg') center / cover no-repeat;
+  }
+
+  &.stars_active_5 .stars__item:nth-child(-n+5) {
+    background: svg-load('img/star_colored.svg') center / cover no-repeat;
+  }
+
+	&_mr-12 {
+		margin-right: 12px;
+	}
+
+	&_mt {
+		margin-top: 9px;
+	}
+
+	&__item {
+		width: 14px;
+		height: 14px;
+		background: svg-load('img/star_gray.svg') center / cover no-repeat;
+		transition: background @transition;
+
+		&.is-active {
+			background: svg-load('img/star_colored.svg') center / cover no-repeat;
+		}
+
+		&_hovered {
+			cursor: pointer;
+		}
+
+		&.is-selected {
+			background: svg-load('img/star_colored.svg') center / cover no-repeat;
+		}
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 4px;
+	}
+}
+
+@media (min-width: @laptop) {
+	.stars {
+		&_mt {
+			margin-top: 12px;
+		}
+
+		&__item {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+@import (reference) "../../less/variables.less";
+
+.catalog {
+  &__item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1;
+    @hover-link();
+
+    &.is-active {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+      .catalog__svg {
+        margin-right: 8px;
+        margin-left: 0;
+        transform: rotate(180deg);
+      }
+    }
+
+    &_gray {
+      color: @color-gray;
+    }
+  }
+
+  &__svg {
+    display: block;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 20px;
+    flex: auto;
+
+    &_colored {
+      color: @color-red;
+    } 
+  }
+}
+
+@media (min-width: @laptop) {
+  .catalog {
+    position: sticky;
+    top: 84px;
+
+    &_static {
+      position: static;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 20px;
+      width: auto;
+      flex: 0 1 auto;
+      white-space: pre-line;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import (reference) "../../less/variables.less";
+
+.centered-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 24px auto;
+
+  &__btn {
+    color: @color-white !important;
+  }
+}
+
+@media (min-width: @laptop) {
+  .centered-block {
+    margin: 32px auto;
+  }
+}

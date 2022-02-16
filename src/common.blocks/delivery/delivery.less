@@ -1,0 +1,57 @@
+@import (reference) "../../less/variables.less";
+
+.delivery {
+	&__city {
+		font-weight: 600;
+		margin-bottom: 16px;
+	}
+
+	&__city-in {
+		display: inline-block;
+		margin-right: 16px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+	}
+
+	&__price {
+		font-weight: 600;
+		margin-right: 8px;
+    margin-left: 32px;
+	}
+
+	&__date {
+		padding: 2px 8px;
+		border-radius: 8px;
+		background-color: @color-gray-20;
+		flex-shrink: 0;
+	}
+}
+
+@media (min-width: @laptop) {
+	.delivery {
+		&__item {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			grid-gap: 8px 0;
+		}
+		
+		&__top {
+			margin-bottom: 0;
+		}
+
+		&__company {
+			font-size: 16px;
+		}
+	}
+}

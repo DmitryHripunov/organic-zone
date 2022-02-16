@@ -1,0 +1,100 @@
+@import (reference) "../../less/variables.less";
+
+.suggestions {
+    padding: 16px;
+    position: absolute;
+    top: calc(100% + 48px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: @color-white;
+    z-index: 10;
+    width: calc(100% - 30px);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    min-height: max-content;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    z-index: 11;
+
+    &__img {
+      display: block;
+      width: 32px;
+      height: 40px;
+      margin-right: 8px;
+    }
+
+    .suggest-item {
+      width: 100%;
+    }
+
+    .suggest-item:not(:last-child):not(.suggestions__city-item) {
+			margin-bottom: 16px;
+		}
+
+    &__heading {
+      margin-left: auto;
+    }
+
+    &__title {
+      flex: 0 1 auto;
+      margin-right: 8px;
+      // max-width: 200px;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
+      // display: block;
+    }
+    
+    &__price {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      margin-right: 8px;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    &_fit {
+      top: 100%;
+      padding: 16px 0;
+      max-width: 100%;
+      width: 100%;
+
+      .suggestions__city-item {
+        margin-bottom: 0;
+        padding: 8px;
+        @hover-link();
+      }
+    }
+  }
+
+@media (min-width: @laptop) {
+  .suggestions {
+    top: 100%;
+    width: calc(100vw - 36px);
+    padding: 24px 36px;
+    transform: translateX(calc(-50% - -62px));
+
+    &__heading {
+      padding: 0;
+    }
+
+    &_fit {
+      max-width: 100%;
+      width: 100%;
+
+      .suggestions__city-item {
+        padding: 8px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .suggestions {
+    max-width: 1280px;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,132 @@
+@import (reference) "../../less/variables.less";
+
+.blog {
+	&__list {
+		display: flex;
+		align-items: top;
+		flex-wrap: wrap;
+		margin: -16px;
+	}
+
+	&__item {
+		flex: 1 1 auto;
+		padding: 16px;
+	}
+
+	&__link {
+		display: block;
+		min-height: 100%;
+	}
+	
+	&__picture {
+		display: flex;
+		min-height: 158px;
+		max-height: 220px;
+		
+		&_huge {
+			height: calc((370 / 1440) * 100vw);
+			max-height: 370px;
+			min-height: 172px;
+		}
+	}
+
+	&__img {
+		display: block;
+		border-radius: 8px;
+		object-fit: cover;
+		flex: auto;
+	}
+
+	&__heading {
+		font-weight: 600;
+		max-width: 400px;
+		padding-left: 12px;
+		padding-bottom: 12px;
+	}
+
+	&__date {
+		display: block;
+		margin-bottom: 8px;
+		color: @color-gray;
+		font-size: 12px;
+		line-height: 16px;
+		padding-left: 12px;
+		margin-top: 8px;
+	}
+
+	&__info-text {
+		margin-bottom: 16px;
+	}
+}
+
+@media (min-width: @tablet) {
+	.blog {
+		&__item {
+			flex: 0 1 auto;
+
+			&_huge {
+				flex: 0 1 50%;
+				.blog__picture {
+					.blog__img {
+						max-width: unset;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+
+		&__img {
+			max-width: 400px;
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+	.blog {
+		&__list {
+			margin: -20px;
+		}
+
+		&__item {
+			padding: 20px;
+		}
+
+		&__date {
+			margin-top: 12px;
+			margin-bottom: 12px;
+		}
+
+		&__date {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		&__heading {
+			font-size: 20px;
+			line-height: 28px;
+			transition: color @transition;
+		}
+
+		&__link {
+			transition: box-shadow @transition;
+
+			&:hover {
+				box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+				border-radius: 8px;
+
+				.blog__heading {
+					color: @color-primary-hover;
+				}
+			}
+		}
+
+		&__info-text {
+			max-width: 840px;
+			width: 100%;
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 32px;
+		}
+	}
+}

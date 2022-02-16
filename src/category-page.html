@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      ${require('./common.blocks/breadcrumbs/breadcrumbs.html')}
+
+      <div class="container">
+        <div class="page-section">
+          <h1 class="title title_h1">
+            Сыворотки и флюиды
+            <span class="title title_subtitle">20 621 товар</span>
+          </h1>
+        </div>
+
+        <div class="page-section page-section_middle">
+          <div class="slider js-slider-line-inner">
+            <div class="swiper-container slider__swiper-container js-slider-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card-mini/card-mini.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card-mini/card-mini.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card-mini/card-mini.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card-mini/card-mini.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card-mini/card-mini.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card-mini/card-mini.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card-mini/card-mini.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card-mini/card-mini.html')}
+                </div>
+              </div>
+
+              <div class="slider__swiper-pagination"></div>
+            </div>
+
+            <div class="slider__swiper-button-prev">
+              <svg class="icon icon_size-10 icon_color-primary">
+                <use xlink:href="#arrow-short"></use>
+              </svg>
+            </div>
+
+            <div class="slider__swiper-button-next">
+              <svg class="icon icon_size-10 icon_color-primary">
+                <use xlink:href="#arrow-short"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-section ">
+          <div class="grid grid_inner">
+            <div class="grid__wrapper">
+              <div class="grid__aside">
+                <div class="filter" id="action-filter">
+                  <div class="filter__wrapper-mobile hidden-desktop">
+                    <div class="title title_h1">Фильтры</div>
+
+                    <button type="button" class="filter__close-btn js-close-popup">
+                      <svg class="icon icon_size-24 search-top__icon">
+                        <use xlink:href="#close-2"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <form id="form-filters" class="form">
+                    <div class="filter__group">
+                      <div class="catalog catalog_static">
+                        <ul class="catalog__list">
+                          <div class="filter__title hidden-desktop">
+                              Категория
+                          </div>
+
+                          <li class="catalog__item">
+                            <a href="catalog-page.html" class="catalog__link is-active">
+                              <span class="catalog__text">Для лица</span>
+                              <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                                <use xlink:href="#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </li>
+
+                          <li class="catalog__item">
+                            <a href="catalog-page-1.html" class="catalog__link is-active">
+                              <span class="catalog__text">Сыворотки и флюиды</span>
+                              <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                                <use xlink:href="#arrow-right"></use>
+                              </svg>
+                            </a>
+                          </li>
+
+                          <li class="catalog__item">
+                            <label class="form__label-radio">
+                              <input type="radio" name="catalog-filter" class="form__radio">
+                              <span class="form__radio-text">Сыворотки</span>
+                            </label>
+                          </li>
+
+                          <li class="catalog__item">
+                            <label class="form__label-radio">
+                              <input type="radio" name="catalog-filter" class="form__radio">
+                              <span class="form__radio-text">Флюиды</span>
+                            </label>
+                          </li>
+
+                          <li class="catalog__item">
+                            <label class="form__label-radio">
+                              <input type="radio" name="catalog-filter" class="form__radio" disabled checked>
+                              <span class="form__radio-text">Эмульсии</span>
+                            </label>
+                          </li>
+
+                          <li class="catalog__item">
+                            <label class="form__label-radio">
+                              <input type="radio" name="catalog-filter" class="form__radio" disabled>
+                              <span class="form__radio-text">Элексиры</span>
+                            </label>
+                          </li>
+
+                          <li class="catalog__item">
+                            <label class="form__label-radio">
+                              <input type="radio" name="catalog-filter" class="form__radio">
+                              <span class="form__radio-text">Эссенции</span>
+                            </label>
+                          </li>
+
+                          <li class="catalog__item">
+                            <label class="form__label-radio">
+                              <input type="radio" name="catalog-filter" class="form__radio">
+                              <span class="form__radio-text">Маски</span>
+                            </label>
+                          </li>
+
+                          <li class="catalog__item">
+                            <label class="form__label-radio">
+                              <input type="radio" name="catalog-filter" class="form__radio">
+                              <span class="form__radio-text">Кислоты</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="filter__group">
+                      <div class="filter__heading">
+                        <span class="filter__heading-text">Бренд</span>
+                      </div>
+
+                      <div class="range-slider js-range-slider">
+                        <div class="range-slider__range">
+                          <div class="range-control"></div>
+                        </div>
+
+                        <div class="range-slider__input-frame">
+                          <div class="range-slider__input-wrap">
+                            <input autocomplete="off" type="number" value="999"
+                              class="range-slider__input range-input-0" data-price-min="999"
+                              data-price-current-min="999">
+
+                            <span class="range-slider__caption">₽</span>
+                          </div>
+
+                          <div class="range-slider__input-wrap">
+                            <input autocomplete="off" type="number" value="99999"
+                              class="range-slider__input range-input-1" data-price-max="99999"
+                              data-price-current-max="99999">
+
+                            <span class="range-slider__caption">₽</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__group">
+                      <div class="filter__heading js-acc-btn">
+                        <span class="filter__heading-text">Бренд</span>
+
+                        <svg class="icon icon_size-12 icon_color-dark filter__svg">
+                          <use xlink:href="#arrow-left"></use>
+                        </svg>
+                      </div>
+
+                      <ul class="filter__list js-acc-content">
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check-all">
+                            <span class="form__checkbox-text">Выбрать все</span>
+                          </label>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox" disabled>
+                            <span class="form__checkbox-text">Aroy-D</span>
+                          </label>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox" checked disabled>
+                            <span class="form__checkbox-text">BioGourmet
+                              3</span>
+                          </label>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">ВDe la Sierra
+                              60</span>
+                          </label>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">Fit Parad</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="filter__group">
+                      <div class="filter__heading js-acc-btn">
+                        <span class="filter__heading-text">Состав и ингредиент</span>
+
+                        <svg class="icon icon_size-12 icon_color-dark filter__svg">
+                          <use xlink:href="#arrow-left"></use>
+                        </svg>
+                      </div>
+
+                      <ul class="filter__list js-acc-content">
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check-all">
+                            <span class="form__checkbox-text">Выбрать все</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">Aroy-D</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">BioGourmet
+                              3</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">ВDe la Sierra
+                              60</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox ">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">Fit Parad</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <a href="#" class="filter__show-all">Показать всё</a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="filter__group">
+                      <div class="filter__heading js-acc-btn">
+                        <span class="filter__heading-text">Свойства продукции</span>
+
+                        <svg class="icon icon_size-12 icon_color-dark filter__svg">
+                          <use xlink:href="#arrow-left"></use>
+                        </svg>
+                      </div>
+
+                      <ul class="filter__list js-acc-content">
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check-all">
+                            <span class="form__checkbox-text">Выбрать все</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">Aroy-D</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">BioGourmet
+                              3</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">ВDe la Sierra
+                              60</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">Fit Parad</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <a href="#" class="filter__show-all">Показать всё</a>
+                        </li>
+                      </ul>
+
+                    </div>
+
+                    <div class="filter__group">
+                      <div class="filter__heading js-acc-btn">
+                        <span class="filter__heading-text">Возраст человека</span>
+
+                        <svg class="icon icon_size-12 icon_color-dark filter__svg">
+                          <use xlink:href="#arrow-left"></use>
+                        </svg>
+                      </div>
+
+                      <ul class="filter__list js-acc-content">
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check-all">
+                            <span class="form__checkbox-text">Выбрать все</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">Aroy-D</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">BioGourmet
+                              3</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check">
+                            <span class="form__checkbox-text">ВDe la Sierra
+                              60</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <label class="form__label-checkbox">
+                            <input type="checkbox" class="form__checkbox js-check js-checkbox-input">
+                            <span class="form__checkbox-text">Fit Parad</span>
+                          </label>
+
+                          <div class="filter__info-count">167</div>
+                        </li>
+
+                        <li class="filter__item">
+                          <a href="#" class="filter__show-all">Показать всё</a>
+                        </li>
+                      </ul>
+
+                    </div>
+
+                    <div class="filter__group">
+                      <button class="btn btn_primary btn_fill btn_wrap btn_tiny">
+                        <span>Посмотреть</span>
+
+                        <span id="count-products" class="btn__text">
+                          13 товаров
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="grid__main">
+                <div class="top-bar">
+                  <div class="top-bar__mobile ">
+                    <div class="top-bar__mobile-wrapper">
+                      <button class="top-bar__filter-btn js-open-popup" data-target="#action-filter">
+                        <svg class="icon icon_size-24 icon_color-black icon_mr-8">
+                          <use xlink:href="#filter"></use>
+                        </svg>
+                        Фильтры
+                      </button>
+  
+                      <div class="top-bar__popular">
+                        <button data-target="#action-popular-products" class="top-bar__popular-action js-dropdown-btn">
+                          Популярные
+                          <svg class="icon icon_size-12 icon_color-black icon_ml-8">
+                            <use xlink:href="#triangle"></use>
+                          </svg>
+                        </button>
+  
+                        <div id="action-popular-products" class="top-bar__popular-dropdown js-item-dropdown">
+                          <div class="dropdown">
+                            <ul class="dropdown__list">
+                              <li class="dropdown__item"><a href="/" class="dropdown__link">Популярные</a></li>
+                              <li class="dropdown__item"><a href="#" class="dropdown__link">Новинки</a></li>
+                              <li class="dropdown__item"><a href="#" class="dropdown__link">Сначала дешевые</a></li>
+                              <li class="dropdown__item"><a class="dropdown__link">Сначала дорогие</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="top-bar__hashtags">
+                      <li class="top-bar__hashtags-item">
+                        Сыворотки
+                      </li>
+                      <li class="top-bar__hashtags-item">
+                        Флюиды
+                      </li>
+                      <li class="top-bar__hashtags-item">
+                        Эмульсия
+                      </li>
+                      <li class="top-bar__hashtags-item">
+                        Элексиры
+                      </li>
+                      <li class="top-bar__hashtags-item">
+                        Эссенции
+                      </li>
+                    </ul>
+
+                    ${require('./common.blocks/hashtags/hashtags.html')}
+                  </div>
+
+                  <div class="top-bar__desktop">
+                    ${require('./common.blocks/hashtags/hashtags.html')}
+
+                    <ul class="top-bar__desktop-list">
+                      <li class="top-bar__desktop-item">
+                        <a href="#" class="top-bar__desktop-link is-active">Популярные</a>
+                      </li>
+
+                      <li class="top-bar__desktop-item">
+                        <a href="#" class="top-bar__desktop-link">Дешевые</a>
+                      </li>
+
+                      <li class="top-bar__desktop-item">
+                        <a href="#" class="top-bar__desktop-link">Дорогие</a>
+                      </li>
+
+                      <li class="top-bar__desktop-item">
+                        <a href="#" class="top-bar__desktop-link">Высокая оценка</a>
+                      </li>
+
+                      <li class="top-bar__desktop-item">
+                        <a href="#" class="top-bar__desktop-link">Скидки</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="section-grid section-grid_spread">
+                  <ul class="section-grid__list">
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                    <li class="section-grid__item">
+                      ${require('./common.blocks/card/card.html')}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      ${require('./common.blocks/subscription/subscription.html')}
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

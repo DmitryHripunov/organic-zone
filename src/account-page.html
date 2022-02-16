@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="page-section">
+          <h1 class="title title_h1 title_indent-sm">Личный кабинет</h1>
+
+          <div class="account">
+            <ul class="account__grid">
+              <li class="account__item account__item_fill">
+                <div class="account__header">
+                  <div class="account__heading">
+                    <div class="account__icon">
+                      <svg class="icon_size-32 icon_color-dark">
+                        <use xlink:href="#acc-bag"></use>
+                      </svg>
+                    </div>
+
+                    <div class="title title_h5">Заказы</div>
+                  </div>
+
+                  <a href="/order-history-page.html" class="btn btn_secondary">История заказов</a>
+                </div>
+
+                <div class="account__body">
+                  <ul class="account__body-list">
+                    <li class="account__body-item">
+                      <h4 class="title title_h4 title_indent-16">Текущий заказ</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info">
+                          <div class="account__info-status">
+                            <a href="#" class="accaunt__text account__text_green account__text_bold">
+                              № 9124234329
+                            </a>
+
+                            <span class="accaunt__text ">от 05.08.2021</span>
+                            <div class="account__helper account__helper_orange  account__text_left">Обработан</div>
+                          </div>
+
+                          <div class="account__info-product">
+                            <div class="account__text account__text_bold">12 999 ₽</div>
+
+                            <div class="account__text account__text_right">1 товар(ов)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="account__body-item">
+                      <h4 class="title title_h4 title_indent-16">Прошлые заказ</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info">
+                          <div class="account__info-status">
+                            <a href="#" class="accaunt__text account__text_green account__text_bold">
+                              № 9124234329
+                            </a>
+
+                            <span class="accaunt__text ">от 05.08.2021</span>
+                            <div class="account__helper account__helper_red  account__text_left">Заказ отменён</div>
+                          </div>
+
+                          <div class="account__info-product">
+                            <div class="account__text account__text_bold">999 999 ₽</div>
+
+                            <div class="account__text account__text_right">3 товар(ов)</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="account__info-group">
+                        <div class="account__info">
+                          <div class="account__info-status">
+                            <a href="#" class="accaunt__text account__text_green account__text_bold">
+                              № 9124234329
+                            </a>
+                            <span class="accaunt__text ">от 05.08.2021</span>
+
+                            <div class="account__helper account__helper_green  account__text_left">Заказ выполнен</div>
+                          </div>
+
+                          <div class="account__info-product">
+                            <div class="account__text account__text_bold">999 999 ₽</div>
+
+                            <div class="account__text account__text_right">114 товар(ов)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="account__item">
+                <div class="account__header">
+                  <div class="account__heading">
+                    <div class="account__icon">
+                      <span class="account__icon-title">
+                        <span class="js-user-name">жонстантин</span><span class="js-user-name">щонстантинопольский</span>
+                      </span>
+                    </div>
+
+                    <div class="title title_h5">Личные данные</div>
+                  </div>
+
+                  <a href="#" class="account__action">
+                    <svg class="icon icon_size-24 icon_color-black icon_mr-8">
+                      <use xlink:href="#logout"></use>
+                    </svg>
+
+                    Выйти
+                  </a>
+                </div>
+
+                <div class="account__body">
+                  <ul class="account__body-list">
+                    <li class="account__body-item">
+                      <h4 class="title title_h4 title_indent-16">Константин Константинопольский</h4>
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div>example@example.com</div>
+  
+                          <div>+7 987-****210</div>
+  
+                          <div>11.11.1984</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="account__footer">
+                  <div class="account__info-group">
+                    <div class="account__info-group account__info-group_actions">
+                      <button data-target="#change-data" class="account__action js-open-popup">
+                        Изменить личные данные
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="account__item">
+                <div class="account__header">
+                  <div class="account__heading">
+                    <div class="account__icon">
+                      <svg class="account__icon icon icon_size-32 icon_color-dark">
+                        <use xlink:href="#acc-mail"></use>
+                      </svg>
+                    </div>
+
+                    <div class="title title_h5">Рассылки</div>
+                  </div>
+                </div>
+
+                <div class="account__body">
+                  <ul class="account__body-list">
+                    <li class="account__body-item">
+                      <div class="form">
+                        <ul class="account__body-list">
+                          <li class="account__body-item">
+                            <h4 class="title title_h4 title_indent-16">Email-уведомления:</h4>
+
+                            <label class="form__label-checkbox">
+                              <input type="checkbox" class="form__checkbox">
+                              <span class="form__checkbox-text">Я хочу получать уведомления</span>
+                            </label>
+                          </li>
+
+                          <li class="account__body-item">
+                            <h4 class="title title_h4 title_indent-16">SMS-уведомления:</h4>
+
+                            <label class="form__label-checkbox">
+                              <input type="checkbox" class="form__checkbox">
+                              <span class="form__checkbox-text">Я хочу получать уведомления</span>
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- <li class="account__item">
+                <div class="account__header">
+                  <div class="account__heading">
+                    <div class="account__icon">
+                      <svg class="icon icon_size-32 icon_color-dark">
+                        <use xlink:href="#acc-book"></use>
+                      </svg>
+                    </div>
+
+                    <div class="title title_h5">Адресная книга</div>
+                  </div>
+                </div>
+
+                <account-address ></account-address>
+                <div class="account__body">
+                  <ul class="account__body-list">
+                    <li class="account__body-item">
+                      <h4 class="title title_h4 title_indent-16">г. Пенза</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__text">080134, ул. Металлистов, д. 25а</div>
+                      </div>
+
+                      <div class="account__info-group account__info-group_actions">
+                        <a href="#" class="account__action">Изменить</a>
+                        <a href="#" class="account__action">Удалить</a>
+                      </div>
+                    </li>
+
+                    <li class="account__body-item">
+                      <h4 class="title title_h4 title_indent-16">г. Питер</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__text">080134, ул. Металлистов, д. 25а</div>
+                      </div>
+
+                      <div class="account__info-group account__info-group_actions">
+                        <button class="account__action">Изменить</button>
+                        <button class="account__action">Удалить</button>
+                      </div>
+                    </li>
+
+                    <li class="account__body-item">
+                      <button class="btn btn_secondary">Добавить адрес</button>
+                    </li>
+                  </ul>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      ${require('./common.blocks/subscription/subscription.html')}
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+
+    ${require('./common.blocks/popup-data-user/popup-data-user.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

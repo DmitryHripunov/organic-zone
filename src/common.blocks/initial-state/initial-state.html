@@ -1,0 +1,195 @@
+<script>
+  /* eslint-disable*/
+  const INITIAL_STATE = {
+    basket: {
+      "basketProducts": [{
+        "id": 29,
+        "productId": 10,
+        "title": "Сухой шампунь LADY HENNA LEDI0019",
+        "article": "LEDI0019",
+        "price": {
+          "value": 200,
+          "valueOld": 400
+        },
+        "image": "/u/product/19_md_0.png",
+        "quantity": 1,
+        "isDelete": false,
+        "isSelected": false,
+        "weight": 0.4
+      }],
+      "basketProductsDelete": [],
+      "promotions": null,
+    },
+    product: {
+      "offers": [{
+        "id": 19,
+        "article": "MEME0017",
+        "price": {
+          "value": 292,
+          "valueOld": 400,
+          "discount": 27
+        },
+        "weight": 100,
+        "badge": "Бестселлер",
+        "volume": "85 г",
+        "images": [{
+          "id": "2919",
+          "value": "/img/nophoto400.jpg"
+        }],
+        "isActive": true,
+        "title": "Шампунь твёрдый \"Шикарный\" Meela Meelo"
+      }]
+    },
+    account: {
+      "userData": {
+        "id": 1,
+        "name": "Константин",
+        "surname": "Константинопольский",
+        "mail": "example@example.com",
+        "phone": "+7(987) 504 72 10",
+        "birthDay": 11,
+        "monthDay": 11,
+        "yearDay": 1984,
+        "emailNotifications": false,
+        "smsNotifications": false,
+        "address": [{
+            "id": 1,
+            "city": "г. Пенза, Пензенская область",
+            "index": 080134,
+            "street": "ул.Фурманова",
+            "buildingNumber": 31,
+            "apartmentNumber": null,
+            "isActiveAddress": false
+          },
+          {
+            "id": 2,
+            "city": " Пензенская область",
+            "index": 080134,
+            "street": "ул.Фурм",
+            "buildingNumber": 1342,
+            "apartmentNumber": 31,
+            "isActiveAddress": false
+          },
+        ],
+        "selectedAddress": [],
+      }
+    },
+    favorite: {
+      favoriteIds: {
+        10: 10,
+        11: 11,
+        12: 12,
+      },
+    },
+    stories: {
+      'stories': [{
+          'id': 1,
+          'image': 'https://cdn.dribbble.com/users/15687/screenshots/17108715/media/52804a892793c0423c1edf47c8e4c249.png',
+          'heading': 'Тоник для лица с АНА-кислотами для нормальной',
+          'date': '20 дек',
+          'category': 'Хиты',
+          'active': false,
+          'link': 'https://yandex.ru/',
+          'episodes': {
+            1: {
+              'episodeId': 1,
+              'src': 'https://cdn.dribbble.com/users/15687/screenshots/17108715/media/52804a892793c0423c1edf47c8e4c249.png',
+            },
+            // 2: {
+            //   'episodeId': 2,
+            //   'src': 'https://goldapple.ru/media/stories/8/8/8871cf2ed1824196ad18e769e168160d.mp4',
+            // },
+            // 3: {
+            //   'episodeId': 3,
+            //   'src': 'https://cdn.dribbble.com/users/1205252/screenshots/17105181/media/6e6248b6939bf6750ce85251d4b310b2.mp4',
+            // },
+            // 4: {
+            //   'episodeId': 4,
+            //   'src': 'https://goldapple.ru/media/stories/8/8/8871cf2ed1824196ad18e769e168160d.mp4',
+            // },
+          },
+        },
+        {
+          'id': 2,
+          'image': 'https://cdn.dribbble.com/users/910614/screenshots/17111248/media/0a25f16b335a23e237ca41a58d3bd80c.jpg',
+          'category': 'Аромотерапия',
+          'date': '1 Янв',
+          'active': false,
+          'link': 'https://yandex.ru/',
+          'episodes': {
+            1: {
+              'episodeId': 1,
+              'src': 'https://goldapple.ru/media/stories/2/2/229992028ad940ac83b64df07e4b1fca.mp4',
+            },
+            // 2: {
+            //   'episodeId': 2,
+            //   'src': 'https://goldapple.ru/media/stories/8/8/8871cf2ed1824196ad18e769e168160d.mp4',
+            // },
+            // 3: {
+            //   'episodeId': 3,
+            //   'src': 'https://goldapple.ru/media/stories/5/6/56572ce7aa5d42f89f5e6af8d4dc7ed1.mp4',
+            // },
+            // 4: {
+            //   'episodeId': 4,
+            //   'src': 'https://cdn.dribbble.com/users/15687/screenshots/17108715/media/52804a892793c0423c1edf47c8e4c249.png',
+            // },
+          },
+        },
+        {
+          'id': 3,
+          'image': 'https://cdn.dribbble.com/users/1048071/screenshots/17111584/media/d56229b7600e2d0030a70d0dc309026f.jpg',
+          'category': 'Косметика',
+          'date': '11 Янв',
+          'active': false,
+          'episodes': {
+            1: {
+              'episodeId': 1,
+              'src': 'https://goldapple.ru/media/stories/2/2/229992028ad940ac83b64df07e4b1fca.mp4',
+            },
+            2: {
+              'episodeId': 2,
+              'src': 'https://cdn.dribbble.com/users/1040516/screenshots/17115118/media/b9020690b6e560453271399b9614727d.mp4',
+            },
+          },
+        },
+        {
+          'id': 4,
+          'image': 'https://cdn.dribbble.com/users/910614/screenshots/17111248/media/0a25f16b335a23e237ca41a58d3bd80c.jpg',
+          'category': 'Аромотерапия',
+          'date': '1 Янв',
+          'active': false,
+          'episodes': {
+            1: {
+              'episodeId': 1,
+              'src': 'https://cdn.dribbble.com/users/910614/screenshots/17111248/media/0a25f16b335a23e237ca41a58d3bd80c.jpg',
+            },
+            2: {
+              'episodeId': 2,
+              'src': 'https://goldapple.ru/media/stories/8/8/8871cf2ed1824196ad18e769e168160d.mp4',
+            },
+            3: {
+              'episodeId': 3,
+              'src': 'https://goldapple.ru/media/stories/5/6/56572ce7aa5d42f89f5e6af8d4dc7ed1.mp4',
+            },
+            4: {
+              'episodeId': 4,
+              'src': 'https://cdn.dribbble.com/users/15687/screenshots/17108715/media/52804a892793c0423c1edf47c8e4c249.png',
+            },
+            5: {
+              'episodeId': 5,
+              'src': 'https://cdn.dribbble.com/users/15687/screenshots/17108715/media/52804a892793c0423c1edf47c8e4c249.png',
+            },
+            6: {
+              'episodeId': 6,
+              'src': 'https://cdn.dribbble.com/users/15687/screenshots/17108715/media/52804a892793c0423c1edf47c8e4c249.png',
+            },
+          },
+        },
+      ],
+    },
+    user: {
+      city: "Барнаул",
+    },
+  };
+
+</script>

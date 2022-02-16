@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card__header">
+    <favorite-button :product-id="10"></favorite-button>
+
+    <a href="product-page.html" class="card__link">
+      <img src="${require('../../assets/img/product/product-2.png')}"
+        alt="#" class="card__img">
+    </a>
+
+    <div class="card__discount"> - 16%</div>
+  </div>
+
+  <div class="card__body">
+    <div class="card__price-wrapper">
+      <div class="card__price">
+        44 000 ₽
+      </div>
+
+      <div class="card__price-old">
+        44 000 ₽
+      </div>
+    </div>
+
+    <div class="card__label card__label_orange">Бесцеллер</div>
+
+    <h3 class="card__title">
+      Крем для лица для жирной и проблемной кожи
+    </h3>
+
+    <span class="card__hashtag-link">Для тела</span>
+
+    <div class="stars stars_mt">
+      <i class="stars__item is-active"></i>
+      <i class="stars__item is-active"></i>
+      <i class="stars__item is-active"></i>
+      <i class="stars__item is-active"></i>
+      <i class="stars__item is-active"></i>
+    </div>
+  </div>
+
+  
+  <div class="card__footer">
+    <add-to-basket variant="card__btn" :offer-id="20"></add-to-basket>
+    <!-- <button class="btn btn_primary card__btn js-add-to-card">
+      В корзину
+    </button> -->
+  </div>
+</div>

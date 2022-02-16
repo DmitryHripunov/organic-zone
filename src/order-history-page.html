@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a href="/account-page" class="breadcrumbs__link">Личный кабинет</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">История заказов</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="page-section">
+          <h1 class="title title_h1 title_indent-sm">История заказов</h1>
+
+          <div class="account">
+            <h4 class="title title_h5 title_indent-sm">Текущий заказ</h4>
+
+            <ul class="account__grid account__grid_accordion">
+              <li class="account__item account__item_fill account__item_accordion">
+                <ul class="account__body-list">
+                  <li class="account__body-item ">
+                    <div class="account__info-group account__info-group_hovered js-acc-btn">
+                      <div class="account__info">
+                        <div class="account__info-status">
+                          <a class="accaunt__text account__text_green account__text_bold">
+                            № 9124234329
+                          </a>
+
+                          <span class="accaunt__text ">от 05.08.2021</span>
+                          <div class="account__helper account__helper_orange  account__text_left">Обработан</div>
+                        </div>
+
+                        <div class="account__info-product">
+                          <div class="account__text account__text_bold">12 999 ₽</div>
+
+                          <div class="account__text account__text_right">1 товар(ов)</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="account__accordion js-acc-content" style="display: none;">
+                      <h4 class="title title_h4 title_indent-16">Получатель:</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div>
+                            Константин Константинопольский
+                          </div>
+
+                          <div>
+                            example@example.com
+                          </div>
+
+                          <div>
+                            +7 987-504-72-10
+                          </div>
+                        </div>
+                      </div>
+
+                      <h4 class="title title_h4 title_indent-16">Доставка:</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div>
+                            СДЕК, «FivePost», Пензенская область, Пенза, Клары Цеткин ул, 63А
+                          </div>
+
+                          <div class="account__info-table">
+                            <span>Вес посылки:</span>
+
+                            <span>2 кг</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h4 class="title title_h4 title_indent-16">Оплата:</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div class="account__info-table">
+                            <span>Стоимость доставки:</span>
+
+                            <span>Бесплатно</span>
+                          </div>
+
+                          <div class="account__info-table">
+                            <span>Способ оплаты:</span>
+
+                            <span>Оплата банковской картой онлайн</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="account__info-group">
+                        <ul class="basket-items">
+                          <li class="basket-items__item">
+                            <div class="basket-items__img-wrapper">
+                              <img
+                                src="https://cdn.dribbble.com/users/86194/screenshots/17023616/media/c9543572fde7e1952b5157fd6127e1fd.png"
+                                alt="#" class="basket-items__img">
+                            </div>
+
+                            <div class="basket-items__body basket-items__body_history">
+                              <div class="basket-items__name">
+                                Сухой шампунь LADY HENNA LEDI0019 Сухой шампунь LADY HENNA LEDI0019
+                              </div>
+
+                              <div class="basket-items__id">Артикул: LEDI0019</div>
+                            </div>
+
+                            <div class="basket-items__history">
+                              <span>111 329 ₽</span>
+                              <span>21 шт</span>
+                              <span>111 629 ₽</span>
+                            </div>
+                          </li>
+
+                          <li class="basket-items__item">
+                            <div class="basket-items__img-wrapper">
+                              <img
+                                src="https://cdn.dribbble.com/users/86194/screenshots/17023616/media/c9543572fde7e1952b5157fd6127e1fd.png"
+                                alt="#" class="basket-items__img">
+                            </div>
+
+                            <div class="basket-items__body basket-items__body_history">
+                              <div class="basket-items__name">
+                                Сухой шампунь LADY HENNA LEDI0019
+                              </div>
+
+                              <div class="basket-items__id">Артикул: LEDI0019</div>
+                            </div>
+
+                            <div class="basket-items__history">
+                              <span>329 ₽</span>
+                              <span>2 шт</span>
+                              <span>629 ₽</span>
+                            </div>
+                          </li>
+
+                          <li class="basket-items__item">
+                            <div class="basket-items__img-wrapper">
+                              <img
+                                src="https://cdn.dribbble.com/users/86194/screenshots/17023616/media/c9543572fde7e1952b5157fd6127e1fd.png"
+                                alt="#" class="basket-items__img">
+                            </div>
+
+                            <div class="basket-items__body basket-items__body_history">
+                              <div class="basket-items__name">
+                                Сухой шампунь LADY HENNA LEDI0019
+                              </div>
+
+                              <div class="basket-items__id">Артикул: LEDI0019</div>
+                            </div>
+
+                            <div class="basket-items__history">
+                              <span>329 ₽</span>
+                              <span>2 шт</span>
+                              <span>629 ₽</span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4 class="title title_h5 title_indent-sm">Прошлые заказы</h4>
+
+            <ul class="account__grid account__grid_accordion">
+              <li class="account__item account__item_fill account__item_accordion">
+                <ul class="account__body-list">
+                  <li class="account__body-item">
+                    <div class="account__info-group account__info-group_hovered js-acc-btn">
+                      <div class="account__info">
+                        <div class="account__info-status">
+                          <a class="accaunt__text account__text_green account__text_bold">
+                            № 9124234329
+                          </a>
+
+                          <span class="accaunt__text ">от 05.08.2021</span>
+                          <div class="account__helper account__helper_red account__text_left">Заказ отменён</div>
+                        </div>
+
+                        <div class="account__info-product">
+                          <div class="account__text account__text_bold">999 999 ₽</div>
+
+                          <div class="account__text account__text_right">10 товар(ов)</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="account__accordion js-acc-content" style="display: none;">
+                      <h4 class="title title_h4 title_indent-16">Получатель:</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div>
+                            Константин Константинопольский
+                          </div>
+
+                          <div>
+                            example@example.com
+                          </div>
+
+                          <div>
+                            +7 987-504-72-10
+                          </div>
+                        </div>
+                      </div>
+
+                      <h4 class="title title_h4 title_indent-16">Доставка:</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div>
+                            СДЕК, «FivePost», Пензенская область, Пенза, Клары Цеткин ул, 63А
+                          </div>
+
+                          <div class="account__info-table">
+                            <span>Вес посылки:</span>
+
+                            <span>2 кг</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h4 class="title title_h4 title_indent-16">Оплата:</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div class="account__info-table">
+                            <span>Стоимость доставки:</span>
+
+                            <span>Бесплатно</span>
+                          </div>
+
+                          <div class="account__info-table">
+                            <span>Способ оплаты:</span>
+
+                            <span>Оплата банковской картой онлайн</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="account__info-group">
+                        <ul class="basket-items">
+                          <li class="basket-items__item">
+                            <div class="basket-items__img-wrapper">
+                              <img
+                                src="https://cdn.dribbble.com/users/86194/screenshots/17023616/media/c9543572fde7e1952b5157fd6127e1fd.png"
+                                alt="#" class="basket-items__img">
+                            </div>
+
+                            <div class="basket-items__body basket-items__body_history">
+                              <div class="basket-items__name">
+                                Сухой шампунь LADY HENNA LEDI0019
+                              </div>
+
+                              <div class="basket-items__id">Артикул: LEDI0019</div>
+                            </div>
+
+                            <div class="basket-items__history">
+                              <span>329 ₽</span>
+                              <span>2 шт</span>
+                              <span>629 ₽</span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="account__item account__item_fill account__item_accordion">
+                <ul class="account__body-list">
+                  <li class="account__body-item">
+                    <div class="account__info-group account__info-group_hovered js-acc-btn">
+                      <div class="account__info">
+                        <div class="account__info-status">
+                          <a class="accaunt__text account__text_green account__text_bold">
+                            № 9124234329
+                          </a>
+
+                          <span class="accaunt__text ">от 05.08.2021</span>
+                          <div class="account__helper account__helper_green account__text_left">Заказ выполнен</div>
+                        </div>
+
+                        <div class="account__info-product">
+                          <div class="account__text account__text_bold">999 999 ₽</div>
+
+                          <div class="account__text account__text_right">7 товар(ов)</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="account__accordion js-acc-content" style="display: none;">
+                      <h4 class="title title_h4 title_indent-16">Получатель:</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div>
+                            Константин Константинопольский
+                          </div>
+
+                          <div>
+                            example@example.com
+                          </div>
+
+                          <div>
+                            +7 987-504-72-10
+                          </div>
+                        </div>
+                      </div>
+
+                      <h4 class="title title_h4 title_indent-16">Доставка:</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div>
+                            СДЕК, «FivePost», Пензенская область, Пенза, Клары Цеткин ул, 63А
+                          </div>
+
+                          <div class="account__info-table">
+                            <span>Вес посылки:</span>
+
+                            <span>2 кг</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h4 class="title title_h4 title_indent-16">Оплата:</h4>
+
+                      <div class="account__info-group">
+                        <div class="account__info-content">
+                          <div class="account__info-table">
+                            <span>Стоимость доставки:</span>
+
+                            <span>Бесплатно</span>
+                          </div>
+
+                          <div class="account__info-table">
+                            <span>Способ оплаты:</span>
+
+                            <span>Оплата банковской картой онлайн</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="account__info-group">
+                        <ul class="basket-items">
+                          <li class="basket-items__item">
+                            <div class="basket-items__img-wrapper">
+                              <img
+                                src="https://cdn.dribbble.com/users/86194/screenshots/17023616/media/c9543572fde7e1952b5157fd6127e1fd.png"
+                                alt="#" class="basket-items__img">
+                            </div>
+
+                            <div class="basket-items__body basket-items__body_history">
+                              <div class="basket-items__name">
+                                Сухой шампунь LADY HENNA LEDI0019 Сухой шампунь LADY HENNA LEDI0019
+                              </div>
+
+                              <div class="basket-items__id">Артикул: LEDI0019</div>
+                            </div>
+
+                            <div class="basket-items__history">
+                              <span>111 329 ₽</span>
+                              <span>21 шт</span>
+                              <span>111 629 ₽</span>
+                            </div>
+                          </li>
+
+                          <li class="basket-items__item">
+                            <div class="basket-items__img-wrapper">
+                              <img
+                                src="https://cdn.dribbble.com/users/86194/screenshots/17023616/media/c9543572fde7e1952b5157fd6127e1fd.png"
+                                alt="#" class="basket-items__img">
+                            </div>
+
+                            <div class="basket-items__body basket-items__body_history">
+                              <div class="basket-items__name">
+                                Сухой шампунь LADY HENNA LEDI0019
+                              </div>
+
+                              <div class="basket-items__id">Артикул: LEDI0019</div>
+                            </div>
+
+                            <div class="basket-items__history">
+                              <span>329 ₽</span>
+                              <span>2 шт</span>
+                              <span>629 ₽</span>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      ${require('./common.blocks/subscription/subscription.html')}
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

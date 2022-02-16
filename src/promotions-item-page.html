@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container container_middle">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Акции</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">Новинка! Скрабы для тела</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="page-section page-section_small">
+        <div class="container">
+          <a class="hero__swiper-link">
+            <picture class="hero__swiper-picture">
+              <source media="(max-width: 1024px)" type="image/webp"
+                srcset="${require('./assets/img/banners/hero-mobile.webp')}">
+
+              <source class="hero__swiper-img" srcset="${require('./assets/img/banners/hero.webp')}" type="image/webp">
+
+              <img class="hero__swiper-img" src="${require('./assets/img/banners/hero.jpg')}" alt="#">
+            </picture>
+          </a>
+        </div>
+      </div>
+
+      <section class="page-section">
+        <div class="container container_middle">
+          <div class="user-content user-content_inner">
+            <time datetime="2021-12-14">14 декабря — 31 декабря</time>
+
+            <p>
+              Получите подарок при покупке косметики VERA на сумму от 2 500 рублей! Дарим полноразмерную матовую помаду
+              для губ (в
+              оттенке 14).
+            </p>
+
+            <div class="centered-block">
+              <a href="/catalog/?filter=promo" class="centered-block__btn btn btn_primary">Перейти к покупкам</a>
+            </div>
+
+            <p>
+              Акция действует в интернет-магазине и офлайн-супермаркетах.
+            </p>
+
+            <span>Обращаем ваше внимание:</span>
+            <ul>
+              <li>
+                Количество подарков ограничено.
+              </li>
+
+              <li>
+                Акция «подарок при покупке» не действует в офлайн-супермаркетах и при выборе способа доставки «Доставка
+                из магазина» и
+                «Самовывоз» в Самаре, Челябинске и Москве (ТЦ Афимолл Сити). Для того, чтобы получить подарок, выберите
+                любой другой
+                доступный способ доставки.
+              </li>
+            </ul>
+
+
+            <p>
+              Получить дополнительную информацию вы можете по телефону нашего сall-центра — 8 800 770 70 21 или в
+              онлайн-чате
+              WhatsApp.
+            </p>
+
+            <img src="${require('./assets/img/user-content/middle-heigth.jpg')}" alt="#">
+
+            <h3>Поделиться акцией</h3>
+
+            <div class="social-gray">
+              <a href="#" class="social-gray__link social-gray__link_vk">
+                <svg class="icon icon_size-20 icon_color_dark">
+                  <use xlink:href="#social-gray-vk"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="social-gray__link social-gray__link_inst">
+                <svg class="icon icon_size-20 icon_color_dark">
+                  <use xlink:href="#social-gray-inst"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="social-gray__link social-gray__link_telega">
+                <svg class="icon icon_size-16 icon_color_dark">
+                  <use xlink:href="#social-gray-telega"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="social-gray__link social-gray__link_whats">
+                <svg class="icon icon_size-20 icon_color_dark">
+                  <use xlink:href="#social-gray-whats"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="social-gray__link social-gray__link_pin">
+                <svg class="icon icon_size-20 icon_color_dark">
+                  <use xlink:href="#social-gray-pin"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

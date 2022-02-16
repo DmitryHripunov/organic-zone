@@ -1,0 +1,38 @@
+@import (reference) "../../less/variables.less";
+
+.mobile-buttons {
+  position: fixed;
+  left: 0;
+  bottom: 66px;
+  width: 100%;
+  padding: 8px 0;
+  background-color: #ffffff;
+  z-index: 10;
+  border-bottom: 1px solid @color-gray-20;
+  transition: transform @transition, opacity @transition;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn {
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: none;
+    margin-top: 8px;
+    padding: 8px 0;
+    font-weight: 600;
+    color: @color-primary;
+  }
+
+  &.is-hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    z-index: -10;
+  }
+}

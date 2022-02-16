@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      ${require('./common.blocks/breadcrumbs/breadcrumbs.html')}
+      <div class="product-page">
+        <div class="container">
+          <div class="page-section">
+            <!-- дублирование -->
+            <div class="hidden-mobile">
+              <div class="product-page__info">
+                <h1 class="title title_h1 title_indent-16">
+                  Гель для лица с эффектом абсорбции и детоксикации, очищающий Botavikos
+                </h1>
+
+                <div class="product-page__feature">
+                  <div class="stars stars_mr-12">
+                    <i class="stars__item is-active"></i>
+                    <i class="stars__item is-active"></i>
+                    <i class="stars__item"></i>
+                    <i class="stars__item"></i>
+                    <i class="stars__item"></i>
+                  </div>
+
+                  <a href="#comments" class="product-page__inner-link js-comments">2 отзыва</a>
+
+                  <a href="#" class="product-page__feature-item">
+                    <svg class="icon icon_color-primary icon_block product-page__feature-svg">
+                      <use xlink:href="#share"></use>
+                    </svg>
+
+                    <span class="product-page__feature-icon-text hidden-mobile">Поделиться</span>
+                  </a>
+
+                  <favorite-button :product-id="10" show-mode="product-page"></favorite-button>
+
+                  <div class="product-page__feature-id">
+                    Артикул: НА3241
+                    <a href="#" class="product-page__feature-id-name">Botavikos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-page__top-wrapper">
+              <product-slider></product-slider>
+
+              <div class="product-page__content">
+                <!-- дублирование -->
+                <div class="hidden-desktop">
+                  <div class="product-page__feature ">
+                    <div class="stars stars_mr-12">
+                      <i class="stars__item is-active"></i>
+                      <i class="stars__item is-active"></i>
+                      <i class="stars__item"></i>
+                      <i class="stars__item"></i>
+                      <i class="stars__item"></i>
+                    </div>
+
+                    <a href="#comments" class="product-page__inner-link js-comments">2 отзыва</a>
+
+                    <a href="#" class="product-page__feature-item">
+                      <svg class="icon icon_color-primary icon_block product-page__feature-svg">
+                        <use xlink:href="#share"></use>
+                      </svg>
+
+                      <span class="product-page__feature-icon-text hidden-mobile">Поделиться</span>
+                    </a>
+
+                    <favorite-button :product-id="10" show-mode="product-page"></favorite-button>
+
+                    <div class="product-page__feature-id">
+                      Артикул: НА3241
+                      <a href="#" class="product-page__feature-id-name">Botavikos</a>
+                    </div>
+                  </div>
+                </div>
+
+                <h1 class="title title_h1 title_indent-16 hidden-desktop">
+                  Гель для лица с эффектом абсорбции и детоксикации, очищающий Botavikos
+                </h1>
+
+                <div class="product-page__field">
+                  <product-volume></product-volume>
+                  <!-- <div class="product-volume">
+                    <div class="product-volume__title">Объем:</div> -->
+
+                  <!-- <ul class="product-volume__list">
+                      <li class="product-volume__item is-active">
+                        <span class="product-volume__text">
+                          25 мл
+                        </span>
+                      </li>
+
+                      <li class="product-volume__item">
+                        <span class="product-volume__text">
+                          50 мл
+                        </span>
+                      </li>
+
+                      <li class="product-volume__item">
+                        <span class="product-volume__text">
+                          100 мл
+                        </span>
+                      </li>
+
+                      <li class="product-volume__item">
+                        <span class="product-volume__text">
+                          2 500 мл
+                        </span>
+                      </li>
+                    </ul> -->
+                  <!-- </div> -->
+                </div>
+
+                <div class="product-page__field">
+                  <product-price></product-price>
+                  <!-- <div class="product-price">
+                    <div class="product-price__wrapper">
+                      <div class="product-price__price">1350 ₽</div>
+                      <div class="product-price__old">1350 ₽</div>
+                    </div>
+
+                    <div class="product-price__caption-wrapper">
+                      <div class="product-price__caption">Хит продаж</div>
+                      <div class="product-price__caption">-99%</div>
+                    </div>
+                  </div> -->
+                </div>
+
+                <div class="product-page__field product-page__field_btns hidden-mobile">
+                  <add-to-basket variant="btn_fill"></add-to-basket>
+
+                  <button class="btn btn_secondary btn_fill js-open-popup" data-target="#one-shot">
+                    Купить в один клик
+                  </button>
+                </div>
+
+                <div class="product-page__field">
+                  <div class="product-char">
+                    <ul class="product-char__list">
+                      <li class="product-char__item">
+                        <div class="product-char__question">Бренд:</div>
+                        <div class="product-char__answer product-char__answer_brand">Botavikos</div>
+                      </li>
+
+                      <li class="product-char__item">
+                        <div class="product-char__question">Страна производитель:</div>
+                        <div class="product-char__answer">Россия</div>
+                      </li>
+
+                      <li class="product-char__item">
+                        <div class="product-char__question">Эффект:</div>
+                        <div class="product-char__answer">Востанавление</div>
+                      </li>
+                    </ul>
+
+                    <a href="#characteristics" class="product-page__inner-link product-char__link js-char">Описание</a>
+                  </div>
+                </div>
+
+                <div class="product-page__field">
+                  <delivery-base></delivery-base>
+                  <!-- <div class="delivery">
+                    <div class="delivery__city">
+                      Доставка в
+                      <span class="delivery__city-in">Москву</span>
+
+                      <a class="product-page__inner-link">Изменить</a>
+                    </div>
+
+                    <ul class="delivery__list">
+                      <li class="delivery__item">
+                        <div class="delivery__top">
+                          <svg class="icon icon_size-24 icon_mr-8">
+                            <use xlink:href="#cdek"></use>
+                          </svg>
+
+                          <span class="delivery__company">Cамовывоз из пункта выдачи</span>
+                        </div>
+                        <span class="delivery__price">202 руб</span>
+                        <span class="delivery__date">до 17 октября</span>
+                      </li>
+
+                      <li class="delivery__item">
+                        <div class="delivery__top">
+                          <svg class="icon icon_size-24 icon_mr-8">
+                            <use xlink:href="#boxberry"></use>
+                          </svg>
+
+                          <span class="delivery__company">Самовывоз из пункта выдачи Boxberry</span>
+                        </div>
+
+                        <span class="delivery__price">350 руб</span>
+                        <span class="delivery__date">до 19 октября</span>
+                      </li>
+
+                      <li class="delivery__item">
+                        <div class="delivery__top">
+                          <svg class="icon icon_size-24 icon_mr-8">
+                            <use xlink:href="#cdek"></use>
+                          </svg>
+
+                          <span class="delivery__company">Доставка курьером СДЭК</span>
+                        </div>
+                        <span class="delivery__price">350 руб</span>
+                        <span class="delivery__date">до 19 октября</span>
+                      </li>
+
+                      <li class="delivery__item">
+                        <div class="delivery__top">
+                          <svg class="icon icon_size-24 icon_mr-8">
+                            <use xlink:href="#russian-post"></use>
+                          </svg>
+
+                          <span class="delivery__company">Почта России</span>
+                        </div>
+                        <span class="delivery__price">350 руб</span>
+                        <span class="delivery__date">срок неизвестен</span>
+                      </li>
+
+                      <li class="delivery__item">
+                        <div class="delivery__top">
+                          <svg class="icon icon_size-24 icon_mr-8">
+                            <use xlink:href="#icon-box"></use>
+                          </svg>
+
+                          <span class="delivery__company">Самовывоз из магазина (только для г. Королёв)</span>
+                        </div>
+
+                        <span class="delivery__price">бесплатно</span>
+                        <span class="delivery__date">доступно</span>
+                      </li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <section class="product-page__gallery">
+              <div class="user-gallery">
+                <h3 class="user-gallery__title">Фото покупателей</h3>
+
+                <ul class="user-gallery__list">
+                  <li class="user-gallery__item">
+                    <a data-fslightbox
+                      href="https://cdn.dribbble.com/users/5674622/screenshots/16640201/media/4494e8dacb5b8f077e01216e414be4ff.jpg"
+                      class="user-gallery__link">
+                      <img src="./assets/img/stories/usser-banner.jpg" alt="#" class="user-gallery__img">
+                    </a>
+                  </li>
+
+                  <li class="user-gallery__item">
+                    <a data-fslightbox
+                      href="https://cdn.dribbble.com/users/5674622/screenshots/14759950/media/4667f21ca8e504ed1e32db6c252cee63.jpg"
+                      class="user-gallery__link">
+                      <img src="./assets/img/stories/usser-banner.jpg" alt="#" class="user-gallery__img">
+                    </a>
+                  </li>
+
+                  <li class="user-gallery__item">
+                    <a data-fslightbox
+                      href="https://cdn.dribbble.com/users/76454/screenshots/16625865/media/cb3a39c4310abbcfab2f5d4dd5a9a821.png"
+                      class="user-gallery__link">
+                      <img src="https://dummyimage.com/80x100/000/fff" alt="#" class="user-gallery__img">
+                    </a>
+                  </li>
+
+                  <li class="user-gallery__item">
+                    <a data-fslightbox
+                      href="https://cdn.dribbble.com/users/76454/screenshots/16625662/media/19433333b6fd479db51b7b6370f763ca.png"
+                      class="user-gallery__link">
+                      <img src="./assets/img/stories/usser-banner.jpg" alt="#" class="user-gallery__img">
+                    </a>
+                  </li>
+
+                  <li class="user-gallery__item">
+                    <a data-fslightbox
+                      href="https://cdn.dribbble.com/users/76454/screenshots/16530500/media/1137ea049e133245968cae472e479001.png"
+                      class="user-gallery__link">
+                      <img src="./assets/img/stories/usser-banner.jpg" alt="#" class="user-gallery__img">
+                    </a>
+                  </li>
+
+                  <li class="user-gallery__item">
+                    <a data-fslightbox
+                      href="https://cdn.dribbble.com/users/76454/screenshots/16625509/media/37db7877c266f3aae2b3beda79a2734f.png"
+                      class="user-gallery__link user-gallery__link_overlay">
+                      <img src="./assets/img/stories/usser-banner.jpg" alt="#" class="user-gallery__img">
+                      <span class="user-gallery__overlay">+2</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <div class="page-section">
+            ${require('./common.blocks/slider-inline/slider-inline.html')}
+          </div>
+
+          <section class="page-section" id="characteristics">
+            <div class="product-desc">
+              <div class="grid">
+                <div class="grid__wrapper">
+                  <div class="grid__main">
+                    <div class="user-content user-content_inner">
+                      <h3>Описание</h3>
+
+                      <p>
+                        Для всех типов волос, при жирных корнях. Профилактика перхоти.
+                        Шампунь на основе природных компонентов способствует эффективному очищению, восстановлению
+                        баланса
+                        волос, обеспечивает
+                        надежную профилактику перхоти.
+                        Мятно-камфорная композиция эфирных масел: мята луговая, апельсин, мандарин, кедр гималайский,
+                        лайм,
+                        кардамон, камфора,
+                        грушанка.
+                        Активные ингредиенты: экстракт зверобоя, пантенол, сок алоэ вера, натуральная аминокислота
+                        цинка.
+                        Хранить в защищенном от прямых солнечных лучей месте, при температуре от 5°С до 25°С. Возможна
+                        индивидуальная
+                        непереносимость на компоненты средства.
+                      </p>
+
+                      <h4>Предупреждение</h4>
+
+                      <p>
+                        Рекомендуется детям с 6 месяцев, начиная с 1/2 чайной ложки 2 раза в день, увеличивая постепенно
+                        к 12 месяцам
+                        до 100 г в день. Не разогревать в микроволновой печи. Не оставляйте детей без присмотра во время
+                        использования.
+                      </p>
+
+                      <h4>Условия хранения</h4>
+
+                      <p>При температуре от +1С до +25С, после вскрытия хранить в холодильнике
+                        в
+                        течение 24 часов</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="title title_h3 title_indent-m">Характеристики</h2>
+
+            <div class="product-char">
+              <ul class="product-char__list">
+                <li class="product-char__item">
+                  <div class="product-char__question">Бренд:</div>
+                  <div class="product-char__answer product-char__answer_brand">Botavikos</div>
+                </li>
+
+                <li class="product-char__item">
+                  <div class="product-char__question">Страна производитель:</div>
+                  <div class="product-char__answer">Россия</div>
+                </li>
+
+                <li class="product-char__item">
+                  <div class="product-char__question">Эффект:</div>
+                  <div class="product-char__answer">Востанавление</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="page-section" id="comments">
+            <h2 class="title title_h2 title_indent-16">Отзывы наших покупателей</h2>
+
+            <div class="grid">
+              <div class="grid__wrapper grid__wrapper_revers">
+                <div class="grid__aside grid__aside_revers grid__aside_mb-24">
+                  <div class="rating">
+                    <ul class="rating__list">
+                      <li class="rating__item">
+                        <div class="rating__heading">Соответствие товара описанию</div>
+
+                        <div class="stars">
+                          <i class="stars__item"></i>
+                          <i class="stars__item"></i>
+                          <i class="stars__item"></i>
+                          <i class="stars__item"></i>
+                          <i class="stars__item"></i>
+                        </div>
+                      </li>
+
+                      <li class="rating__item">
+                        <div class="rating__heading">Скорость обработки заказа</div>
+
+                        <div class="stars">
+                          <i class="stars__item is-active"></i>
+                          <i class="stars__item is-active"></i>
+                          <i class="stars__item is-active"></i>
+                          <i class="stars__item is-active"></i>
+                          <i class="stars__item is-active"></i>
+                        </div>
+                      </li>
+
+                      <li class="rating__item">
+                        <div class="rating__heading">Качество доставки</div>
+
+                        <div class="stars">
+                          <i class="stars__item is-active"></i>
+                          <i class="stars__item is-active"></i>
+                          <i class="stars__item"></i>
+                          <i class="stars__item"></i>
+                          <i class="stars__item"></i>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <button class="btn btn_primary btn_fill js-open-popup" data-target="#leave-review">Написать
+                      отзыв</button>
+                  </div>
+                </div>
+
+                <div class="grid__main">
+                  <div class="comments">
+                    <ul class="comments__list">
+                      <li class="comments__item comments__item_comment">
+                        <div class="comments__wrapper">
+                          <div class="comments__rating comments__rating_high">4.3</div>
+
+                          <div class="comments__data">
+                            <div class="comments__author">Ирина Шевцова</div>
+
+                            <div class="comments__date">21.10.2020</div>
+                          </div>
+
+                          <p class="comments__text">
+                            Заказал сразу 7 коробок для дочки. Даём по 1-2 штучки в день. 1 перед сном и 1 иногда в
+                            садик.
+                            Дочке очень нравится.
+                          </p>
+
+                          <div class="comments__gallery">
+                            <div class="user-gallery">
+                              <ul class="user-gallery__list">
+                                <li class="user-gallery__item">
+                                  <a class="user-gallery__link">
+                                    <img src="/img/usser-banner.jpg" alt="#" class="user-gallery__img">
+                                  </a>
+                                </li>
+
+                                <li class="user-gallery__item">
+                                  <a class="user-gallery__link">
+                                    <img src="/img/usser-banner.jpg" alt="#" class="user-gallery__img">
+                                  </a>
+                                </li>
+
+                                <li class="user-gallery__item">
+                                  <a class="user-gallery__link">
+                                    <img src="https://dummyimage.com/80x100/000/fff" alt="#" class="user-gallery__img">
+                                  </a>
+                                </li>
+
+                                <li class="user-gallery__item">
+                                  <a class="user-gallery__link">
+                                    <img src="/img/usser-banner.jpg" alt="#" class="user-gallery__img">
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="comments__answer">
+                            <div class="comments__data">
+                              <h3 class="comments__author">OrganicZone</h3>
+
+                              <div class="comments__date">17 августа 2020</div>
+                            </div>
+
+                            <p class="comments__text">
+                              Ольга, большое спасибо за отзыв!
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="comments__item comments__item_comment">
+                        <div class="comments__wrapper">
+                          <div class="comments__rating comments__rating_low">1.3</div>
+
+                          <div class="comments__data">
+                            <div class="comments__author">Ирина Шевцова</div>
+
+                            <div class="comments__date">21.10.2020</div>
+                          </div>
+
+                          <p class="comments__text">
+                            Заказал сразу 7 коробок для дочки. Даём по 1-2 штучки в день. 1 перед сном и 1 иногда в
+                            садик.
+                            Дочке очень нравится.
+                            Заказал сразу 7 коробок для дочки. Даём по 1-2 штучки в день. 1 перед сном и 1 иногда в
+                            садик.
+                            Дочке очень нравится.
+                          </p>
+
+                          <div class="comments__answer">
+                            <div class="comments__data">
+                              <h3 class="comments__author">OrganicZone</h3>
+
+                              <div class="comments__date">17 августа 2020</div>
+                            </div>
+
+                            <p class="comments__text">
+                              Ольга, большое спасибо за отзыв!
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="comments__item comments__item_comment">
+                        <div class="comments__wrapper">
+                          <div class="comments__rating comments__rating_mid">3</div>
+
+                          <div class="comments__data">
+                            <div class="comments__author">Ирина Шевцова</div>
+
+                            <div class="comments__date">21.10.2020</div>
+                          </div>
+
+                          <p class="comments__text">
+                            Заказал сразу 7 коробок для дочки. Даём по 1-2 штучки в день. 1 перед сном и 1 иногда в
+                            садик.
+                            Дочке очень нравится.
+                          </p>
+
+                          <div class="comments__gallery">
+                            <div class="user-gallery">
+                              <ul class="user-gallery__list">
+                                <li class="user-gallery__item">
+                                  <a class="user-gallery__link">
+                                    <img src="/img/usser-banner.jpg" alt="#" class="user-gallery__img">
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <button class="btn btn_secondary btn_fill">Показать больше отзывов</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      ${require('./common.blocks/subscription/subscription.html')}
+    </main>
+
+    ${require('./common.blocks/short-info/short-info.html')}
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-buttons/mobile-buttons.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-review/popup-review.html')}
+    ${require('./common.blocks/popup-one-shot/popup-one-shot.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+  </div>
+
+  <script type="module">
+    refreshFsLightbox();
+  </script>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

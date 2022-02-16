@@ -1,0 +1,63 @@
+@import (reference) "../../less/variables.less";
+
+.pagination {
+  margin-top: 16px;
+
+  &__list {
+    display: flex;
+    grid-gap: 8px;
+    overflow-x: auto;
+  }
+
+  &__item {
+    &.is-hidden {
+      display: none;
+    }
+
+    &.disabled {
+      .pagination__link {
+        border: none;
+      }
+    }
+  }
+  
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid @color-primary;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    color: @color-primary;
+    font-weight: 600;
+    transition: color @transition, background @transition, border-color @transition;
+
+    &:hover:not(.disabled .pagination__link) {
+      color: @color-white;
+      background: @color-primary;
+      border-color: @color-primary;
+
+      .icon {
+        fill: @color-white;
+      }
+    }
+
+    &.is-active {
+      cursor: default;
+      color: @color-white;
+      background: @color-primary;
+      border-color: @color-primary;
+    }
+  }
+}
+
+@media (min-width: @laptop) {
+  .pagination {
+    margin-top: 32px;
+  }
+
+  &__list {
+    grid-gap: 16px;
+  }
+}

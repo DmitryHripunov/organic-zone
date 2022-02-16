@@ -1,0 +1,62 @@
+@import (reference) "../../less/variables.less";
+
+.section-grid {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: inherit;
+	}
+
+	&__item {
+		flex: auto;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__link,
+	&__picture,
+	&__img {
+		display: block;
+	}
+
+	&__img {
+		border-radius: 8px;
+		width: 100%;
+	}
+
+	&_spread {
+		.section-grid__list {
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		.section-grid__item {
+			flex: 0 1 136px;
+			height: auto;
+  		min-height: 100%;
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+	.section-grid {
+		&_spread {
+			.section-grid__item {
+				flex-basis: 180px;
+			}
+		}
+
+		&__list {
+			flex-direction: row;
+			grid-gap: 40px;
+		}
+
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}

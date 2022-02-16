@@ -1,0 +1,68 @@
+@import (reference) "../../less/variables.less";
+
+.nav {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &__link {
+    white-space: nowrap;
+    @hover-link();
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__btn {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet) {
+  .nav {
+    &__btn {
+      display: flex;
+      align-items: center;
+      padding: 8px 6px;
+      max-height: 24px;
+      border: 2px solid @color-primary;
+      border-radius: 8px;
+      cursor: pointer;
+      position: sticky;
+
+      &_right {
+        right: -1px;
+      }
+
+      &_left {
+        right: calc(100% - 27px);
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media (min-width: @laptop) {
+  .nav {
+    position: relative;
+
+    &__link {
+      font-size: 16px;
+      line-height: 24px;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+}

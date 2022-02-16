@@ -1,0 +1,42 @@
+<div class="card-mini">
+  <div class="card-mini__wrapper">
+    <div class="card-mini__header">
+      <favorite-button :product-id="22" show-mode="card-mini"></favorite-button>
+  
+      <a href="product-page.html" class="card-mini__link">
+        <img src="${require('../../assets/img/product/product-2.png')}" alt="#" class="card-mini__img">
+      </a>
+  
+      <div class="card-mini__discount"> - 16%</div>
+    </div>
+  
+    <div class="card-mini__body">
+      <h3 class="card-mini__title">
+        Крем для лица для жирной и проблемной кожи
+      </h3>
+  
+      <div class="stars">
+        <i class="stars__item is-active"></i>
+        <i class="stars__item is-active"></i>
+        <i class="stars__item is-active"></i>
+        <i class="stars__item is-active"></i>
+        <i class="stars__item is-active"></i>
+      </div>
+  
+      <div class="card-mini__price-wrapper">
+        <div class="card-mini__price">
+          44 000 ₽
+        </div>
+  
+        <div class="card-mini__price-old">
+          44 000 ₽
+        </div>
+      </div>
+
+      <add-to-basket variant="btn_mimi_card" :offer-id="33"></add-to-basket>
+      <!-- <a href="#" class="btn btn_primary btn_tiny card-mini__btn">
+        В корзину
+      </a> -->
+    </div>
+  </div>
+</div>

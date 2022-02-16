@@ -1,0 +1,149 @@
+@import (reference) "../../less/variables.less";
+
+.comments {
+	&__list {
+		margin-bottom: 24px;
+	}
+
+	&__author {
+		font-weight: 600;
+		font-size: 19px;
+		line-height: 20px;
+		margin-bottom: 8px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__rating {
+		min-width: 50px;
+		height: 50px;
+		border-radius: 100%;
+		font-weight: 600;
+		font-size: 19px;
+		line-height: 1;
+		flex: 0 0 50px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		&_high {
+			background-color: #cce5ac;
+		}
+
+		&_mid {
+			background-color: #FFE587;
+		}
+
+		&_low {
+			background-color: #FFA0A0;
+		}
+	}
+
+	&__text {
+		width: 100%;
+	}
+
+	&__gallery {
+		margin-top: 16px;
+	}
+
+	&__rating {
+		margin-right: 16px;
+	}
+
+	&__date {
+		color: @color-gray;
+	}
+
+	&__data {
+		margin-bottom: 20px;
+		flex: 1;
+	}
+
+	&__answer {
+		position: relative;
+		margin-top: 16px;
+		padding-left: 16px;
+		flex: 1 1 100%;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			height: 100%;
+			width: 1px;
+			background-color: @color-primary;
+		}
+
+		.comments__data {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+	.comments {
+		&__list {
+			margin-bottom: 40px;
+		}
+
+		&__text,
+		&__gallery,
+		&__answer {
+			margin-left: 92px;
+		}
+
+		&__author {
+			font-size: 23px;
+			line-height: 30px;
+		}
+
+		&__data {
+			margin-bottom: 16px;
+		}
+
+		&__date {
+			color: @color-gray;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		&__text {
+			font-size: 16px;
+		}
+
+		&__rating {
+			margin-right: 20px;
+			font-size: 23px;
+			width: 72px;
+			height: 72px;
+			flex: 0 0 72px;
+		}
+
+		&__answer {
+			.comments__data {
+				margin-bottom: 12px;
+			}
+
+			.comments__text {
+				margin-left: 0;
+			}
+		}
+
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 32px;
+			}
+		}
+	}
+}

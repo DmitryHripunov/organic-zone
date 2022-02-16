@@ -1,0 +1,161 @@
+@import (reference) "../../less/variables.less";
+
+.product-page {
+	&__slider,
+	&__feature {
+		margin-bottom: 16px;
+	}
+
+	&__top-wrapper {
+		margin-bottom: 32px;
+	}
+
+	&__feature {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		max-width: 434px;
+	}
+
+	&__feature-item {
+		flex: 0 1 auto;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		border: none;
+		background: transparent;
+
+		&.is-active {
+			.product-page__feature-svg {
+				fill: @color-red;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-left: 24px;
+		}
+	}
+
+	&__feature-link {
+		display: block;
+	}
+
+	&__feature-svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	&__feature-id {
+		flex: 1 1 100%;
+		margin-top: 24px;
+		color: @color-gray;
+	}
+
+	&__feature-id-name {
+		color: @color-primary;
+		font-weight: 600;
+		@hover-link();
+	}
+
+	&__inner-link {
+		color: @color-primary;
+		font-weight: 600;
+		border-bottom: 1px dashed @color-primary;
+		@hover-link();
+    cursor: pointer;
+	}
+
+	&__field {
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+	.product-page {
+		&__info {
+			margin-bottom: 8px;
+			border-bottom: 1px solid #878a83;
+			margin-bottom: 32px;
+			width: 100%;
+		}
+
+		&__top-wrapper {
+			display: flex;
+		}
+
+		&__title {
+			flex: 1;
+		}
+
+		&__feature {
+			max-width: 100%;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+		}
+
+		&__feature-id {
+			margin-top: 0;
+			display: flex;
+			flex-direction: column;
+			flex: none;
+			text-align: end;
+			font-size: 16px;
+			line-height: 24px;
+			margin-left: auto;
+		}
+
+		&__feature-item {
+			display: flex;
+			align-items: center;
+			flex: 0 0 auto;
+			width: auto;
+			@hover-link();
+
+			&:not(:last-child) {
+				margin-left: 32px;
+			}
+		}
+
+		&__feature-svg {
+			width: 28px;
+			height: 28px;
+      margin-right: 12px;
+		}
+
+		&__feature-icon-text {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		&__inner-link {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+    &__content {
+      width: 50%;
+    }
+
+    &__field {
+      &:not(:last-child) {
+        margin-bottom: 36px;
+      }
+
+      &_btns {
+        display: flex;
+        justify-content: space-between;
+        grid-gap: 24px;
+      }
+    }
+
+		&__slider {
+			width: 50%;
+      margin-right: 40px;
+		}
+	}
+}

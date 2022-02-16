@@ -1,0 +1,114 @@
+@import (reference) "../../less/variables.less";
+
+.top-bar {
+	margin-bottom: 16px;
+
+	&__mobile {
+	}
+
+	&__desktop {
+		display: none;
+	}
+
+	&__mobile-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+	}
+
+	&__hashtags {
+		display: flex;
+		overflow-x: auto;
+		grid-gap: 8px;
+		padding-bottom: 8px;
+		margin-bottom: 16px;
+	}
+
+	&__hashtags-item {
+		padding: 4px 8px;
+		border-radius: 24px;
+		background-color: @color-gray-20;
+		white-space: nowrap;
+	}
+
+	&__popular-action,
+	&__filter-btn {
+		background-color: transparent;
+		border: none;
+	}
+
+	&__filter-btn {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 24px;
+		color: @color-primary;
+	}
+
+	&__popular {
+		position: relative;
+	}
+
+	&__popular-dropdown {
+		position: absolute;
+		z-index: 10;
+		top: 100%;
+		right: 8px;
+		overflow: hidden;
+		box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08), 0px 16px 32px rgba(0, 0, 0, 0.08);
+		border-radius: 6px;
+		max-height: 0;
+		transition: opacity @transition, max-height @transition;
+		opacity: 0;
+
+		&.is-visible {
+			max-height: 500px;
+			opacity: 1;
+		}
+
+		&_right {
+			right: auto;
+			left: 0;
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+	.top-bar {
+		padding-bottom: 12px;
+		border-bottom: 1px solid @color-gray;
+
+		&__mobile {
+			display: none;
+		}
+
+		&__desktop {
+			display: block;
+		}
+
+		&__desktop-list {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&__desktop-item {
+			&:not(:last-child) {
+				margin-right: 24px;
+			}
+		}
+
+		&__desktop-link {
+			white-space: nowrap;
+			font-size: 16px;
+			line-height: 24px;
+      @hover-link();
+
+      &.is-active {
+        font-weight: 600;
+        pointer-events: none;
+      }
+		}
+	}
+}

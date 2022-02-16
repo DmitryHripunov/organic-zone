@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">Корзина</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <h1 class="title title_h1 title_indent-sm">Корзина</h1>
+
+        <div class="page-section">
+          <base-basket></base-basket>
+          <!-- <div class="basket">
+            <div class="grid">
+              <div class="grid__wrapper grid__wrapper_revers-inner">
+                <div class="grid__aside grid__aside_revers-inner">
+                  <div class="basket__info">
+                    <h3 class="title title_h3 title_indent-sm">Ваш заказ</h3>
+
+                    <div class="basket__info-header">
+                      <form class="form">
+                        <input placeholder="Промокод" type="text" class="form__input" />
+
+                        <button class="basket__info-submit">
+                          <svg class="icon icon_size-16 icon_color-white">
+                            <use xlink:href="#arrow-right"></use>
+                          </svg>
+                        </button>
+                      </form>
+                    </div>
+
+                    <ul class="basket__info-body">
+                      <li class="basket__info-item">
+                        <dl class="basket__info-props">
+                          <dt>
+                            Товары
+                            <span>(3)</span>
+                          </dt>
+
+                          <dd>1 343 899 ₽</dd>
+                        </dl>
+                      </li>
+
+                      <li class="basket__info-item">
+                        <dl class="basket__info-props">
+                          <dt>Скидка</dt>
+
+                          <dd>– 1 545 433 ₽</dd>
+                        </dl>
+                      </li>
+
+                      <li class="basket__info-item">
+                        <dl class="basket__info-props">
+                          <dt>
+                            <strong>Итого без доставки</strong>
+                          </dt>
+
+                          <dd>
+                            <strong>2 999 999 ₽</strong>
+                          </dd>
+                        </dl>
+                      </li>
+                    </ul>
+
+                    <a href="basket-page.html" class="btn btn_primary btn_fill">Перейти к оформлению</a>
+                  </div>
+                </div>
+
+                <div class="grid__main grid__main_revers-inner">
+                  <form class="form">
+                    <div class="basket__top">
+                      <label class="form__label-checkbox">
+                        <input type="checkbox" class="form__checkbox js-basket-check-all" />
+                        <span class="form__checkbox-text">
+                          <strong>Выбрать всё</strong>
+                        </span>
+                      </label>
+
+                      <button class="basket__btn-delete js-open-popup" data-target="#remove-products">
+                        <svg class="icon icon_color-dark icon_size-16 icon_mr-8">
+                          <use xlink:href="#basket"></use>
+                        </svg>
+                        Очистить корзину
+                      </button>
+                    </div>
+
+                    <ul class="basket-items">
+                      <li class="basket-items__item">
+                        <label class="form__label-checkbox">
+                          <input type="checkbox" class="form__checkbox js-basket-check" />
+                          <span class="form__checkbox-text"></span>
+                        </label>
+
+                        <div class="basket-items__img-wrapper">
+                          <img src="https://dummyimage.com/80x100/3ebdbd/1f202e" alt="#" class="basket-items__img" />
+                        </div>
+
+                        <div class="basket-items__body">
+                          <div class="basket-items__name">
+                            Гель для лица с эффектом абсорбции и детоксикации, очищающий Botavikos, 25 мг
+                          </div>
+
+                          <div class="basket-items__id">Артикул: НА3241</div>
+
+                          <div class="basket-items__action">
+                            <button class="basket__btn-delete">
+                              <svg class="icon icon_color-dark icon_size-16">
+                                <use xlink:href="#heart"></use>
+                              </svg>
+                              <span class="hidden-mobile"> В избранное </span>
+                            </button>
+
+                            <button class="basket__btn-delete">
+                              <svg class="icon icon_color-dark icon_size-16">
+                                <use xlink:href="#basket"></use>
+                              </svg>
+                              <span class="hidden-mobile"> Удалить </span>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="basket-items__aside">
+                          <div class="basket-items__price-wrapper">
+                            <div class="basket-items__price">
+                              329 ₽
+                            </div>
+
+                            <div class="basket-items__price-old">
+                              499 ₽
+                            </div>
+                          </div>
+
+                          <div class="counter js-counter">
+                            <button type="button" class="counter__decrement js-counter-decrement">
+                              -
+                            </button>
+
+                            <input min="1" max="99" value="1" type="number" class="counter__field" placeholder="1" />
+
+                            <button type="button" class="counter__increment js-counter-increment">
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="basket-items__item">
+                        <div class="basket-items__img-wrapper">
+                          <img src="${require('./assets/img/product/product-2.png')}" alt="#" class="basket-items__img">
+                        </div>
+
+                        <div class="basket-items__body">
+                          <div class="basket-items__name basket-items__name_disabled">
+                            Гель для лица с эффектом абсорбции и детоксикации, очищающий Botavikos, 25 мг
+                          </div>
+
+                          <div>
+                            <strong>Удалено</strong>
+                          </div>
+                        </div>
+
+                        <span class="basket-items__info     basket-items__info_invert">
+                          <svg class="icon icon_size-20 icon_color-dark icon_mr-8">
+                            <use xlink:href="#return"></use>
+                          </svg>
+
+                          <div class="basket-items__info-text">
+                            Вернуть
+                          </div>
+                        </span>
+                      </li>
+
+                      <li class="basket-items__item">
+                        <label class="form__label-checkbox">
+                          <input type="checkbox" class="form__checkbox js-basket-check" />
+                          <span class="form__checkbox-text"></span>
+                        </label>
+
+                        <div class="basket-items__img-wrapper">
+                          <img src="${require('./assets/img/product/product-2.png')}" alt="#" class="basket-items__img">
+                        </div>
+
+                        <div class="basket-items__body">
+                          <div class="basket-items__name">
+                            Гель для лица с эффектом абсорбции и детоксикации, очищающий Botavikos, 25 мг
+                          </div>
+
+                          <div class="basket-items__id">Артикул: НА3241</div>
+
+                          <span class="basket-items__warning">Товар закончился</span>
+
+                          <div class="basket-items__action">
+                            <button class="basket__btn-delete">
+                              <svg class="icon icon_color-dark icon_size-16">
+                                <use xlink:href="#heart"></use>
+                              </svg>
+                              <span class="hidden-mobile"> В избранное </span>
+                            </button>
+
+                            <button class="basket__btn-delete">
+                              <svg class="icon icon_color-dark icon_size-16">
+                                <use xlink:href="#basket"></use>
+                              </svg>
+                              <span class="hidden-mobile"> Удалить </span>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="basket-items__aside">
+                          <div class="basket-items__price-wrapper">
+                            <div class="basket-items__price">
+                              329 ₽
+                            </div>
+
+                            <div class="basket-items__price-old">
+                              499 ₽
+                            </div>
+                          </div>
+
+                          <a href="#" class="basket-items__info">
+                            <svg class="icon icon_size-20 icon_color-dark icon_mr-8">
+                              <use xlink:href="#email"></use>
+                            </svg>
+                            Сообщить
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="page-section">
+          ${require('./common.blocks/slider-inline/slider-inline.html')}
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

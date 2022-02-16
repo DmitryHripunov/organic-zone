@@ -1,0 +1,128 @@
+@import (reference) "./variables.less";
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Regular'), local('MontserratRegular'),
+      url('../assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+      url('../assets/fonts/Montserrat-Regular.woff') format('woff'),
+      url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Medium'), local('MontserratMedium'),
+      url('../assets/fonts/Montserrat-Medium.woff2') format('woff2'),
+      url('../assets/fonts/Montserrat-Medium.woff') format('woff'),
+      url('../assets/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-SemiBold'), local('MontserratSemiBold'),
+      url('../assets/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+      url('../assets/fonts/Montserrat-SemiBold.woff') format('woff'),
+      url('../assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat-Bold'), local('MontserratBold'),
+      url('../assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+      url('../assets/fonts/Montserrat-Bold.woff') format('woff'),
+      url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway-Bold'), local('RalewayBold'),
+      url('../assets/fonts/Raleway-SemiBold.woff2') format('woff2'),
+      url('../assets/fonts/Raleway-SemiBold.woff') format('woff'),
+      url('../assets/fonts/Raleway-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  background-color: @color-white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: @color-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+select {
+  background-color: transparent;
+}
+
+ymaps[class*="search__suggest-item_selected_yes"] {
+  background-color: #fff;
+  @hover-link();
+}
+
+ymaps[class*="search__suggest-item"] {
+  font-size: 16px;
+  margin: 24px 0;
+}
+
+ymaps[class*="search__suggest-highlight"] {
+  font-size: 16px;
+}

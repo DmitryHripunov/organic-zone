@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <div class="hero">
+        <div class="page-section page-section_small">
+          <div class="container">
+            <div class="swiper-container js-hero-swiper">
+              <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                  <a href="#" class="hero__swiper-link">
+                    <picture class="hero__swiper-picture">
+                      <source media="(max-width: 1024px)" type="image/webp"
+                        srcset="${require('./assets/img/banners/hero-mobile.webp')}">
+
+                      <source class="hero__swiper-img" srcset="${require('./assets/img/banners/hero.webp')}"
+                        type="image/webp">
+
+                      <img class="hero__swiper-img" src="${require('./assets/img/banners/hero.jpg')}" alt="#">
+                    </picture>
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="hero__swiper-link">
+                    <picture class="hero__swiper-picture">
+                      <img class="hero__swiper-img" src="https://dummyimage.com/1280x370/000/fff" alt="#">
+                    </picture>
+                  </a>
+                </div>
+              </div>
+
+              <div class="hero__swiper-pagination"></div>
+
+              <div class="hero__swiper-button-prev"></div>
+              <div class="hero__swiper-button-next"></div>
+            </div>
+
+            <stories-base></stories-base>
+          </div>
+        </div>
+      </div>
+
+      <section class="slider js-slider">
+        <div class="page-section">
+          <div class="container">
+            <h2 class="title title_h2 title_indent-ml">Популярные</h2>
+
+            <div class="swiper-container slider__swiper-container js-slider-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  <div class="card">
+                    <div class="card__header">
+                      <favorite-button></favorite-button>
+                      <a href="product-page.html" class="card__link">
+                        <img src="${require('./assets/img/product/product-1.jpg')}" alt="#" class="card__img">
+                      </a>
+
+                      <div class="card__discount"> - 16%</div>
+                    </div>
+
+                    <div class="card__body">
+                      <div class="card__price-wrapper">
+                        <div class="card__price">
+                          40 ₽
+                        </div>
+
+                        <div class="card__price-old">
+                          440 ₽
+                        </div>
+                      </div>
+
+                      <div class="card__label card__label_red">Хит продаж</div>
+
+                      <h3 class="card__title">
+                        Крем для лица
+                      </h3>
+
+                      <span class="card__hashtag-link">Для тела</span>
+
+                      <div class="stars stars_mt">
+                        <i class="stars__item is-active"></i>
+                        <i class="stars__item is-active"></i>
+                        <i class="stars__item"></i>
+                        <i class="stars__item"></i>
+                        <i class="stars__item"></i>
+                      </div>
+                    </div>
+
+                    <div class="card__footer">
+                      <a href="#" class="btn btn_primary card__btn">
+                        В корзину
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+              </div>
+
+              <div class="slider__swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="page-section">
+        <div class="partners">
+          <div class="container">
+            <div class="swiper-container partners__swiper-container js-partners-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="partners__link">
+                    <img class="partners__logo" src="${require('./assets/img/partners/brand_1.svg')}" alt="#">
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="partners__link">
+                    <img class="partners__logo" src="${require('./assets/img/partners/brand_2.svg')}" alt="#">
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="partners__link">
+                    <img class="partners__logo" src="${require('./assets/img/partners/brand_3.svg')}" alt="#">
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="partners__link">
+                    <img class="partners__logo" src="${require('./assets/img/partners/brand_4.svg')}" alt="#">
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="partners__link">
+                    <img class="partners__logo" src="${require('./assets/img/partners/brand_5.svg')}" alt="#">
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="partners__link">
+                    <img class="partners__logo" src="${require('./assets/img/partners/brand_6.svg')}" alt="#">
+                  </a>
+                </div>
+
+                <div class="swiper-slide">
+                  <a href="#" class="partners__link">
+                    <img class="partners__logo" src="${require('./assets/img/partners/brand_7.svg')}" alt="#">
+                  </a>
+                </div>
+              </div>
+
+              <div class="partners__swiper-button-prev">
+                <svg class="icon icon_size-10 icon_color-primary">
+                  <use xlink:href="#arrow-short"></use>
+                </svg>
+              </div>
+
+              <div class="partners__swiper-button-next">
+                <svg class="icon icon_size-10 icon_color-primary">
+                  <use xlink:href="#arrow-short"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="chapter-grid">
+            <a href="#" class="chapter-grid__item chapter-grid__item_1">
+              <picture class="chapter-grid__picture">
+                <source media="(max-width: 1024px)" type="image/webp"
+                  srcset="${require('./assets/img/chapter/ch-1-m.webp')}">
+
+                <source class="chapter-grid__img" srcset="${require('./assets/img/chapter/ch-1.webp')}"
+                  type="image/webp">
+
+                <img class="chapter-grid__img" src="${require('./assets/img/chapter/ch-1.jpg')}" alt="#">
+              </picture>
+            </a>
+
+            <a href="#" class="chapter-grid__item chapter-grid__item_2">
+              <picture class="chapter-grid__picture">
+                <source media="(max-width: 1024px)" type="image/webp"
+                  srcset="${require('./assets/img/chapter/ch-2-m.webp')}">
+
+                <source class="chapter-grid__img" srcset="${require('./assets/img/chapter/ch-2.webp')}"
+                  type="image/webp">
+
+                <img class="chapter-grid__img" src="${require('./assets/img/chapter/ch-2.jpg')}" alt="#">
+              </picture>
+            </a>
+
+            <a href="#" class="chapter-grid__item chapter-grid__item_3">
+              <picture class="chapter-grid__picture">
+                <source media="(max-width: 1024px)" type="image/webp"
+                  srcset="${require('./assets/img/chapter/ch-3-m.webp')}">
+
+                <source class="chapter-grid__img" srcset="${require('./assets/img/chapter/ch-3.webp')}"
+                  type="image/webp">
+
+                <img class="chapter-grid__img" src="${require('./assets/img/chapter/ch-3.jpg')}" alt="#">
+              </picture>
+            </a>
+
+            <a href="#" class="chapter-grid__item chapter-grid__item_4">
+              <picture class="chapter-grid__picture">
+                <source media="(max-width: 1024px)" type="image/webp"
+                  srcset="${require('./assets/img/chapter/ch-4-m.webp')}">
+
+                <source class="chapter-grid__img" srcset="${require('./assets/img/chapter/ch-4.webp')}"
+                  type="image/webp">
+
+                <img class="chapter-grid__img" src="${require('./assets/img/chapter/ch-4.jpg')}" alt="#">
+              </picture>
+            </a>
+
+            <a href="#" class="chapter-grid__item chapter-grid__item_5">
+              <picture class="chapter-grid__picture">
+                <source media="(max-width: 1024px)" type="image/webp"
+                  srcset="${require('./assets/img/chapter/ch-5-m.webp')}">
+
+                <source class="chapter-grid__img" srcset="${require('./assets/img/chapter/ch-5.webp')}"
+                  type="image/webp">
+
+                <img class="chapter-grid__img" src="${require('./assets/img/chapter/ch-5.jpg')}" alt="#">
+              </picture>
+            </a>
+
+            <a href="#" class="chapter-grid__item chapter-grid__item_6">
+              <picture class="chapter-grid__picture">
+                <source media="(max-width: 1024px)" type="image/webp"
+                  srcset="${require('./assets/img/chapter/ch-6-m.webp')}">
+
+                <source class="chapter-grid__img" srcset="${require('./assets/img/chapter/ch-6.webp')}"
+                  type="image/webp">
+
+                <img class="chapter-grid__img" src="${require('./assets/img/chapter/ch-6.jpg')}" alt="#">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="slider-grid">
+            <div class="grid">
+              <div class="grid__wrapper">
+                <div class="grid__aside">
+                  <div class="banner">
+                    <div class="banner__content"
+                      style="background: url('${require('./common.blocks/banner/img/frame.jpg')}') center/cover">
+
+                      <span class="banner__logo hidden-desktop">
+                        <svg class="banner__logo-svg">
+                          <use xlink:href="#logo-default"></use>
+                        </svg>
+                      </span>
+
+                      <ul class="banner__nav">
+                        <!-- для этого баннера не более 8 элементов -->
+                        <li class="banner__nav-item">
+                          <a href="#" class="banner__nav-link">Шампуни</a>
+                        </li>
+
+                        <li class="banner__nav-item">
+                          <a href="#" class="banner__nav-link">Кондиционеры</a>
+                        </li>
+
+                        <li class="banner__nav-item">
+                          <a href="#" class="banner__nav-link">Скрабы</a>
+                        </li>
+
+                        <li class="banner__nav-item">
+                          <a href="#" class="banner__nav-link">Кремы</a>
+                        </li>
+
+                        <li class="banner__nav-item">
+                          <a href="#" class="banner__nav-link">Массажные масла</a>
+                        </li>
+
+                        <li class="banner__nav-item">
+                          <a href="#" class="banner__nav-link banner__nav-link_all">
+                            Каталог товара
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid__main">
+                  <div class="slider js-slider-short">
+                    <div class="swiper-container slider__swiper-container js-slider-swiper-short">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+
+                        <div class="swiper-slide slider__slide">
+                          ${require('./common.blocks/card/card.html')}
+                        </div>
+                      </div>
+
+                      <div class="slider__swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="blog">
+            <ul class="blog__list">
+              <li class="blog__item blog__item_huge">
+                <a href="promotions-item-page.html" class="blog__link">
+                  <picture class="blog__picture blog__picture_huge">
+                    <source srcset="${require('./assets/img/banners/hero.webp')}" type="image/webp">
+
+                    <img class="blog__img" src="${require('./assets/img/banners/inner-banner-2.jpg')}" alt="#">
+                  </picture>
+                </a>
+              </li>
+
+              <li class="blog__item blog__item_huge">
+                <a href="promotions-item-page.html" class="blog__link">
+                  <picture class="blog__picture blog__picture_huge">
+                    <source srcset="${require('./assets/img/banners/inner-banner-2.jpg')}" type="image/webp">
+
+                    <img class="blog__img" src="${require('./assets/img/banners/hero.jpg')}" alt="#">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section class="slider  js-slider-line">
+        <div class="page-section">
+          <div class="container">
+            <h2 class="title title_h2 title_indent-ml">Успей купить!</h2>
+            <div class="swiper-container slider__swiper-container js-slider-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+                <div class="swiper-slide slider__slide">
+                  ${require('./common.blocks/card/card.html')}
+                </div>
+
+              </div>
+
+              <div class="slider__swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="container">
+          <h2 class="title title_h2 title_indent-ml">Блог</h2>
+
+          <div class="blog">
+            <ul class="blog__list">
+              <li class="blog__item">
+                <a href="blog-item-page.html" class="blog__link">
+                  <picture class="blog__picture">
+                    <source srcset="${require('./assets/img/blog/b1.webp')}" type="image/webp">
+
+                    <img class="blog__img" src="${require('./assets/img/blog/b1.jpg')}" alt="#">
+                  </picture>
+
+                  <time class="blog__date" datetime="2021-03-11">11 марта 2021</time>
+
+                  <h3 class="blog__heading">Вся правда про интервальное голодание</h3>
+                </a>
+              </li>
+
+              <li class="blog__item">
+                <a href="blog-item-page.html" class="blog__link">
+                  <picture class="blog__picture">
+                    <img class="blog__img" src="https://dummyimage.com/400x220/000/fff" alt="#">
+                  </picture>
+
+                  <time class="blog__date" datetime="2021-03-11">11 марта 2021</time>
+
+                  <h3 class="blog__heading">В чем феномен благований Пало Санто?</h3>
+                </a>
+              </li>
+
+              <li class="blog__item">
+                <a href="blog-item-page.html" class="blog__link">
+                  <picture class="blog__picture">
+                    <img class="blog__img" src="https://dummyimage.com/400x220/000/fff" alt="#">
+                  </picture>
+
+                  <time class="blog__date" datetime="2021-03-11">11 марта 2021</time>
+
+                  <h3 class="blog__heading">Чем заменить мясо и не проголодаться</h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="page-section">
+        <div class="container">
+
+          <div class="user-content">
+            <h1>Organic Zone - интернет магазин
+              натуральной косметики</h1>
+
+            <p>
+              История компании началась с любви её создателей к естественной красоте, природе, всему живому
+              и натуральному.
+            </p>
+
+            <p>
+              Идеологи Levrana — Леонид и Виктория из Санкт-Петербурга.
+            </p>
+
+            <p>
+              В 2013 году пара готовилась к рождению дочери и решила осознанно подойти к выбору средств по уходу
+              за малышом. Так
+              Леонид и Виктория изготовили первое натуральное мыло для собственного пользования. Тогда они не знали, что
+              это послужит
+              отправной точкой к чему-то большему и такому важному. Важному не только для самих себя, но и для многих
+              людей, которые
+              задумываются о своём здоровье и о состоянии окружающей среды.
+            </p>
+
+            <picture>
+              <source srcset="${require('./assets/img/user-content/image.webp')}" type="image/webp">
+
+              <img src="${require('./assets/img/user-content/image.jpg')}" alt="#">
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="adv">
+            <ul class="adv__list">
+              <li class="adv__item">
+                <svg class="adv__svg">
+                  <use xlink:href="#adv-1"></use>
+                </svg>
+
+                <div class="adv__title">Распродажа 24/7</div>
+
+                <span class="adv__desc">Постоянные акции</span>
+              </li>
+
+              <li class="adv__item">
+                <svg class="adv__svg">
+                  <use xlink:href="#adv-2"></use>
+                </svg>
+
+                <div class="adv__title">Бесплатная доставка</div>
+
+                <span class="adv__desc">при заказе от&nbsp;1&nbsp;000 р.</span>
+              </li>
+
+              <li class="adv__item">
+                <svg class="adv__svg">
+                  <use xlink:href="#adv-3"></use>
+                </svg>
+
+                <div class="adv__title">Более 100 000</div>
+
+                <span class="adv__desc">Наименований товаров</span>
+              </li>
+
+              <li class="adv__item">
+                <svg class="adv__svg">
+                  <use xlink:href="#adv-4"></use>
+                </svg>
+
+                <div class="adv__title">Оплата</div>
+
+                <span class="adv__desc">Любые способы</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      ${require('./common.blocks/subscription/subscription.html')}
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

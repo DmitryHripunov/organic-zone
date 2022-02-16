@@ -1,0 +1,78 @@
+@import (reference) "../../less/variables.less";
+
+.grid {
+	&__wrapper {
+		&_revers-inner {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__aside {
+		margin-bottom: 16px;
+
+		&_revers-inner {
+			order: 1;
+			margin-top: 32px;
+		}
+
+		&_mb-24 {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__main {
+
+	}
+}
+
+@media (min-width: @laptop) {
+	.grid {
+		&__wrapper {
+			display: flex;
+
+			&_revers {
+				flex-direction: row-reverse;
+			}
+
+			&_revers-inner {
+				flex-direction: row-reverse;
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+		}
+
+		&__aside {
+			flex: 0 1 400px;
+			margin-right: 40px;
+			margin-bottom: 0;
+
+			&_revers {
+				margin-right: 0;
+				margin-left: 40px;
+			}
+			
+			&_revers-inner {
+				margin-right: 0;
+				margin-left: 40px;
+				order: 0;
+			}
+		}
+
+		&__main {
+			max-width: calc(100% - 440px);
+			width: 100%;
+		}
+
+		&_inner {
+			.grid__aside {
+				flex: 1 0 180px;
+			}
+
+			.grid__main {
+				max-width: calc(100% - 180px);
+				width: 100%;
+			}
+		}
+	}
+}

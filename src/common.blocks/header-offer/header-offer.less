@@ -1,0 +1,41 @@
+@import (reference) "../../less/variables.less";
+
+.header-offer {
+	background-color: @color-primary;
+	padding: 6px 0;
+	transition: 
+		tranform cubic-bezier(0.23, 1, 0.320, 1) .4s,
+		opacyty cubic-bezier(0.23, 1, 0.320, 1) .4s,
+		padding cubic-bezier(0.23, 1, 0.320, 1) .4s;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	&__text {
+		max-width: (200 / 320 * 100vw);
+		color: @color-white;
+	}
+
+	&__btn {
+		background-color: transparent;
+		cursor: pointer;
+		width: 24px;
+		height: 24px;
+		border: none;
+		margin-left: 24px;
+	}
+}
+
+@media (min-width: @laptop) {
+	.header-offer {
+		&__text {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+}

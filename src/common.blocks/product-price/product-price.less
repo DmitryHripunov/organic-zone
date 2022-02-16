@@ -1,0 +1,63 @@
+@import (reference) "../../less/variables.less";
+
+.product-price {
+	&__wrapper {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 12px;
+	}
+
+	&__price {
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 32px;
+		margin-right: 16px;
+	}
+
+	&__old {
+		font-weight: 600;
+		font-size: 23px;
+		text-decoration: line-through;
+		color: @color-gray;
+		line-height: 1;
+	}
+
+	&__caption-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+    grid-gap: 12px;
+	}
+
+	&__caption {
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 16px;
+		color: @color-white;
+		padding: 8px 12px;
+		background-color: @color-red;
+	}
+}
+
+@media (min-width: @laptop) {
+	.product-price {
+    &__wrapper {
+      margin-bottom: 16px;
+    }
+
+		&__price {
+			font-size: 40px;
+			line-height: 48px;
+			margin-right: 24px;
+		}
+
+		&__old {
+			font-size: 28px;
+			line-height: 32px;
+      font-weight: 400;
+		}
+
+    &__caption {
+      font-size: 14px;
+    }
+	}
+}

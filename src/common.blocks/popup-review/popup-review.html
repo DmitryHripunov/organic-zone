@@ -1,0 +1,86 @@
+<div class="popup popup_fill" id="leave-review">
+  <button class="popup__close popup__close_absolute js-close-popup"></button>
+
+  <div class="popup__wrapper">
+    <div class="popup__top">
+      <h3 class="title title_h3 title_indent-sm">Оставьте отзыв</h3>
+    </div>
+
+    <div class="rating rating_simple">
+      <ul class="rating__list">
+        <li class="rating__item">
+          <div class="rating__heading">Соответствие товара описанию</div>
+    
+          <div class="stars">
+            <i class="stars__item stars__item_hovered js-star" data-value="1"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="2"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="3"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="4"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="5"></i>
+          </div>
+        </li>
+    
+        <li class="rating__item">
+          <div class="rating__heading">Скорость обработки заказа</div>
+    
+          <div class="stars">
+            <i class="stars__item stars__item_hovered js-star" data-value="1"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="2"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="3"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="4"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="5"></i>
+          </div>
+        </li>
+    
+        <li class="rating__item">
+          <div class="rating__heading">Качество доставки</div>
+    
+          <div class="stars">
+            <i class="stars__item stars__item_hovered js-star" data-value="1"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="2"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="3"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="4"></i>
+            <i class="stars__item stars__item_hovered js-star" data-value="5"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="popup__group">
+      <form class="form">
+        <div class="form__group">
+          <div>Добавьте до 10 фотографий</div>
+          <input class="form__file-input" type="file" accept=".jpg, .jpeg, .png" id="file-uploader">
+          
+          <div class="form__file-grid">
+            <label for="file-uploader" class="form__label-file"></label>
+          </div>
+        </div>
+
+        <div class="form__group has-error">
+          <input type="text" class="form__input" placeholder="Введите ваше имя">
+          <div class="help-text">This is the description area</div>
+        </div>
+
+        <div class="form__group">
+          <textarea class="form__input form__input_textarea" placeholder="Оставьте свой отзыв"></textarea>
+        </div>
+
+        <div class="form__group">
+          
+          <label class="form__label-checkbox">
+            <input class="form__checkbox" type="checkbox">
+
+            <span class="form__checkbox-text">Я принимаю и согласен на обработку</span>
+
+            <a href="#" class="form__link">персональных данных</a>
+          </label>
+        </div>
+
+        <div class="form__group form__group_left">
+          <button type="submit" class="btn btn_primary">Создать отзыв</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

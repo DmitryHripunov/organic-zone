@@ -1,0 +1,37 @@
+<div class="product-slider">
+  <div class="swiper-container product-slider__thumbs js-product-thumbs">
+    <div class="swiper-wrapper product-slider__thumbs-wrapper">
+      <div class="swiper-slide product-slider__thumbs-slide"
+        style="background-image: url('${require('../../static/img/product-slider.jpg')}')"></div>
+
+      <div class="swiper-slide product-slider__thumbs-slide"
+        style="background-image: url('https://dummyimage.com/530x660/000/fff')"></div>
+    </div>
+  </div>
+
+  <div class="swiper-container js-product-slider">
+    <div class="swiper-wrapper ">
+      <div class="swiper-slide">
+        <a href="#" class="product-slider__swiper-link">
+          <picture class="product-slider__swiper-picture">
+            <source class="product-slider__swiper-img"
+              srcset="${require('../../assets/img/product/product-slider.webp')}" type="image/webp">
+
+            <img class="product-slider__swiper-img" src="${require('../../assets/img/product/product-slider.jpg')}"
+              alt="#">
+          </picture>
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="#" class="product-slider__swiper-link">
+          <picture class="product-slider__swiper-picture">
+            <img class="product-slider__swiper-img" src="https://dummyimage.com/530x660/000/fff" alt="#">
+          </picture>
+        </a>
+      </div>
+    </div>
+
+    <div class="product-slider__swiper-pagination"></div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+@import (reference) "../../less/variables.less";
+
+.no-data {
+	text-align: center;
+
+	&__desc {
+    margin-bottom: 16px;
+		max-width: 880px;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: @laptop) {
+	.no-data {
+		&__desc {
+			font-size: 16px;
+      margin-bottom: 32px;
+		}
+	}
+}

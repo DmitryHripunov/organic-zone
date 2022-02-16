@@ -1,0 +1,27 @@
+@import (reference) "../../less/variables.less";
+
+.quantity-actions {
+  position: absolute;
+  top: -2px;
+  left: 15px;
+  padding: 2px;
+  min-width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  background-color: @color-primary-40;
+
+  &_right {
+    right: calc((100% / 2) - 15px);
+    left: auto;
+    color: @color-dark;
+  }
+}
+
+@media (min-width: @laptop) {
+  .quantity-actions {
+  }
+}

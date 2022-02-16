@@ -1,0 +1,141 @@
+@import (reference) "../../less/variables.less";
+
+.title {
+	font-family: "Raleway", sans-serif;
+	font-weight: 600;
+
+	&_h1 {
+		font-size: 23px;
+		line-height: 1.3;
+	}
+
+	&_h2 {
+		font-size: 23px;
+		line-height: 24px;
+	}
+
+	&_h3 {
+		font-size: 23px;
+		line-height: 24px;
+	}
+
+	&_h4 {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&_h5 {
+		font-size: 19px;
+		line-height: 20px;
+	}
+
+	&_mr-16 {
+		margin-right: 16px;
+	}
+
+	&_inline {
+		display: inline-block;
+	}
+
+	&_indent-s {
+	}
+
+	&_indent-sm {
+		margin-bottom: 16px;
+	}
+
+	&_indent-m {
+		margin-bottom: 8px;
+	}
+
+	&_indent-ml {
+		margin-bottom: 16px;
+	}
+
+	&_indent-l {
+		margin-bottom: 24px;
+	}
+
+	&_indent-16 {
+		margin-bottom: 16px;
+	}
+
+	&_subtitle {
+		font-family: "Montserrat", sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 400;
+		color: @color-gray;
+		white-space: nowrap;
+	}
+
+	&_subtitle-page {
+		font-family: "Montserrat", sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+
+	&_danger {
+		color: @color-red;
+	}
+
+	&_color-white {
+		color: @color-white;
+	}
+}
+
+@media (min-width: @laptop) {
+	.title {
+		&_h1 {
+			font-size: 40px;
+			line-height: 48px;
+		}
+
+		&_h2 {
+			font-size: 33px;
+			line-height: 36px;
+		}
+
+		&_h3 {
+			font-size: 28px;
+			line-height: 32px;
+		}
+
+		&_h4 {
+			font-size: 19px;
+		}
+
+		&_h5 {
+			font-size: 23px;
+			line-height: 30px;
+		}
+
+		&_subtitle {
+			font-size: 16px;
+		}
+
+		&_subtitle-page {
+			font-size: 16px;
+		}
+
+		&_indent-s {
+		}
+
+		&_indent-sm {
+			margin-bottom: 24px;
+		}
+
+		&_indent-m {
+			margin-bottom: 16px;
+		}
+
+		&_indent-ml {
+			margin-bottom: 32px;
+		}
+
+		&_indent-l {
+			margin-bottom: 40px;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+@import (reference) "../../less/variables.less";
+
+.social-gray {
+	display: flex;
+	grid-gap: 12px;
+
+	&__link {
+		padding: 4px;
+		width: 32px;
+		height: 32px;
+		border: 1px solid @color-gray;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    transition: background @transition, border-color @transition;
+
+		&:hover {
+      border-color: transparent;
+
+			.icon {
+				display: block;
+				fill: @color-white;
+				transition: fill 0s;
+			}
+		}
+
+		&_vk:hover {
+			background: #3a88df;
+		}
+
+		&_telega:hover {
+			background: #1797d7;
+		}
+
+		&_inst:hover {
+			background: linear-gradient(0deg, #e09b3d 0.29%, #c74c4d 29.97%, #c21975 59.65%, #7024c4 99.22%);
+      .icon {
+        transition: fill 0s;
+      }
+		}
+
+		&_whats:hover {
+			background: #48c657;
+		}
+
+    &_face:hover {
+			background: #3C5A99;
+		}
+
+		&_pin {
+      &:hover {
+        background: #e7e8e6;
+
+        .icon {
+          fill: @color-dark;
+        }
+      }
+		}
+	}
+}
+
+@media (min-width: @laptop) {
+	.social-gray {
+	}
+}

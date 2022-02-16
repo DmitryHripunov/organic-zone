@@ -1,0 +1,75 @@
+@import (reference) "../../less/variables.less";
+
+.product-char {
+	max-width: 434px;
+
+	&__question,
+	&__answer {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	&__answer_brand {
+		color: @color-primary;
+		font-weight: 600;
+	}
+
+	&__answer {
+		padding-left: 8px;
+		line-height: 1;
+		text-align: right;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 180px;
+	}
+	
+	&__question {
+		padding-right: 8px;
+		color: @color-gray;
+		order: 1;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 210px;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: baseline;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		&::before {
+			content: '';
+			border-bottom: 1px dashed @color-gray;
+			flex-grow: 1;
+			order: 1;
+			transform: translateY(-6px);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		margin-top: 8px;
+	}
+}
+
+@media (min-width: @laptop) {
+	.product-char {
+		&__question,
+		&__answer {
+			font-size: 16px;
+		}
+
+		&__link {
+			display: none;
+		}
+	}
+}

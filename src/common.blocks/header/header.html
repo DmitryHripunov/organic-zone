@@ -1,0 +1,249 @@
+<header class="header">
+  <promo-notify text="Скидка на все 50%" link="http://ya.ru"></promo-notify>
+
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-wrapper">
+        <ul class="header__top-list">
+          <li class="header__top-item">
+            <a href="#" class="header__top-action">Ecobox</a>
+          </li>
+
+          <li class="header__top-item">
+            <a href="#" class="header__top-action">Happy bar</a>
+          </li>
+
+          <li class="header__top-item">
+            <a href="#" class="header__top-action">Innature</a>
+          </li>
+
+          <li class="header__top-item">
+            <a href="#" class="header__top-action">EcoCraft</a>
+          </li>
+
+          <li class="header__top-item">
+            <a href="#" class="header__top-action">OrganicZone</a>
+          </li>
+
+          <li class="header__top-item">
+            <a href="#" class="header__top-action">Tinto</a>
+          </li>
+
+          <li class="header__top-item">
+            <a href="#" class="header__top-action">Артис</a>
+          </li>
+        </ul>
+
+        <ul class="header__top-list">
+          <li class="header__top-item">
+            <city-indicator></city-indicator>
+          </li>
+
+          <li class="header__top-item">
+            <a href="#" class="header__top-action">Сотрудничество</a>
+          </li>
+
+          <li class="header__top-item">
+            <button class="header__top-action js-dropdown-btn" data-target="#action-clients">
+              Клиентам
+              <svg class="icon icon_size-12 icon_color-black icon_ml-8">
+                <use xlink:href="#triangle"></use>
+              </svg>
+            </button>
+
+            <div class="header__item-dropdown js-item-dropdown" id="action-clients">
+              ${require('../../common.blocks/dropdown/dropdown.html')}
+            </div>
+          </li>
+
+          <li class="header__top-item">
+            <a href="tel:+78005553535" class="header__top-action">8 (800) 555-35-35</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  ${require('../../common.blocks/confirm-city/confirm-city.html')}
+
+  <div class="header__body">
+    <div class="container">
+      <div class="header__body-wrapper">
+        <div class="header__body-inner">
+          <button class="burger js-burger-btn" data-target="#mobile-menu">
+            <span class="burger__row"></span>
+            <span class="burger__row"></span>
+            <span class="burger__row"></span>
+          </button>
+
+          <div class="header__logo-wrapper">
+            <a href="/" class="logo">
+              <svg class="logo__svg">
+                <use xlink:href="#logo-default"></use>
+              </svg>
+            </a>
+          </div>
+
+          <button class="btn btn_primary header__catalog-btn hidden-mobile js-menu-btn">
+            <svg class="icon icon_size-24 icon_color-white icon_mr-8">
+              <use class="js-menu-svg" xlink:href="#burger-bulets"></use>
+            </svg>
+
+            Каталог
+          </button>
+        </div>
+
+        <div class="header__search">
+          <search-top></search-top>
+        </div>
+
+        <div class="header__body-inner hidden-mobile">
+          <!-- если зарегестрирован -->
+          <!-- <div class="header__body-action">
+            <a href="/account-page.html" class="header__user-in">
+              <span class="header__user-in-title">
+                <span class="js-user-name">жонстантин</span><span class="js-user-name">щkонстантинопольский</span>
+              </span>
+              Кабинет
+            </a>
+          
+            <a href="/logout" class="header__logout">
+              <svg class="icon icon_size-24 icon_color-black icon_mr-8">
+                <use xlink:href="#logout"></use>
+              </svg>
+          
+              <span class="header__logout-text">Выйти</span>
+            </a>
+          </div> -->
+
+          <!-- если не зарегестрирован -->
+          <a href="#" class="header__body-action js-open-popup" data-target="#log-in">
+            <svg class="icon icon_size-24 icon_color-dark icon_mr-8">
+              <use xlink:href="#user-circle"></use>
+            </svg>
+            Войти
+          </a>
+
+          <favorite-indicator></favorite-indicator>
+          <!-- <a href="/favorites-page.html" class="header__body-action">
+            <span class="quantity-actions">11</span>
+
+            <svg class="icon icon_size-24 icon_color-dark icon_mr-8">
+              <use xlink:href="#heart"></use>
+            </svg>
+            Избранное
+          </a> -->
+
+          <basket-indicator></basket-indicator>
+          <!-- <div class="cart-btn ">
+            <a href="basket-page.html" class="cart-btn__action header__body-action ">
+              <svg class="icon icon_size-28 icon_color-dark icon_mr-8 cart-btn__svg">
+                <use xlink:href="#cart"></use>
+              </svg>
+
+              <div class="cart-btn__text">Корзина</div>
+
+              <div class="cart-btn__active-wrapper">
+                <span class="cart-btn__amount">999 999 ₽</span>
+                <span class="cart-btn__quantity">99 товаров</span>
+              </div>
+            </a>
+
+            <div class="cart-btn__dropdown">
+              <ul class="basket-items">
+                <li class="basket-items__item">
+                  <div class="basket-items__img-wrapper">
+                    <img src="${require('../../assets/img/product/product-2.png')}" alt="#" class="basket-items__img">
+                  </div>
+
+                  <div class="basket-items__body basket-items__body_popup">
+                    <div class="basket-items__name">
+                      Гель для лица с эффектом абсорбции и детоксикации, очищающий Botavikos, 25 мг
+                      Гель для лица с эффектом абсорбции и детоксикации, очищающий Botavikos, 25 мг
+                    </div>
+
+                    <div class="basket-items__id">
+                      Артикул: НА3241
+                    </div>
+
+                    <div class="basket-items__action">
+                      <button class="basket__btn-delete">
+                        <svg class="icon icon_color-dark icon_size-16">
+                          <use xlink:href="#heart"></use>
+                        </svg>
+                      </button>
+
+                      <button class="basket__btn-delete">
+                        <svg class="icon icon_color-dark icon_size-16">
+                          <use xlink:href="#basket"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="basket-items__aside">
+                    <div class="basket-items__price-wrapper">
+                      <div class="basket-items__price">
+                        44 000 ₽
+                      </div>
+
+                      <div class="basket-items__price-old">
+                        44 000 ₽
+                      </div>
+                    </div>
+
+                    ${require('../../common.blocks/counter/counter.html')}
+                  </div>
+                </li>
+              </ul>
+
+              <dl class="basket-items__footer">
+                <dt>
+                  <strong>Итого</strong>
+                </dt>
+
+                <dd>
+                  <strong>2 999 999 ₽</strong>
+                </dd>
+              </dl>
+
+              <a href="order-page.html" class="btn btn_primary btn_fs-18">Оформить заказ</a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      ${require('../../common.blocks/menu/menu.html')}
+    </div>
+
+
+    ${require('../../common.blocks/mobile-menu/mobile-menu.html')}
+  </div>
+
+  <div class="header__nav">
+    <div class="container">
+      <nav class="nav">
+        <!-- не более 12 элементов -->
+        <a href="#" class="nav__link ">Для лица</a>
+        <a href="#" class="nav__link">Для тела</a>
+        <a href="#" class="nav__link">Декоративная косметика</a>
+        <a href="#" class="nav__link">Для волос</a>
+        <a href="#" class="nav__link">Ароматерапия</a>
+        <a href="#" class="nav__link">Уход за полостью рта</a>
+        <a href="#" class="nav__link">Для мужчин</a>
+        <a href="#" class="nav__link">Солнцезащита</a>
+
+        <a href="#" class="nav__link">Солнцезащита</a>
+        <a href="#" class="nav__link">Солнцезащита</a>
+        <a href="#" class="nav__link">Солнцезащита</a>
+        <a href="#" class="nav__link is-view">Солнцезащита</a>
+
+        <button class="nav__btn nav__btn_right js-nav-btn">
+          <svg class="icon icon_size-10 icon_color-primary">
+            <use xlink:href="#arrow-short"></use>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>

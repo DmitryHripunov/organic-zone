@@ -1,0 +1,93 @@
+<h2 class="title title_h2 title_indent-ml">Вам будет это интересно</h2>
+
+<div class="slider js-slider-line">
+  <div class="swiper-container slider__swiper-container js-slider-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slider__slide">
+        ${require('../../common.blocks/card/card.html')}
+      </div>
+
+      <div class="swiper-slide slider__slide">
+        <div class="card">
+          <div class="card__header">
+            <favorite-button></favorite-button>
+
+            <a href="product-page.html" class="card__link">
+              <img src="${require('../../assets/img/product/product-1.jpg')}" alt="#" class="card__img">
+            </a>
+
+            <div class="card__discount"> - 16%</div>
+          </div>
+
+          <div class="card__body">
+            <div class="card__price-wrapper">
+              <div class="card__price">
+                40 ₽
+              </div>
+
+              <div class="card__price-old">
+                440 ₽
+              </div>
+            </div>
+
+            <div class="card__label card__label_red">Хит продаж</div>
+
+            <h3 class="card__title">
+              Крем для лица
+            </h3>
+
+            <span class="card__hashtag-link">Для тела</span>
+
+            <div class="stars stars_mt">
+              <i class="stars__item is-active"></i>
+              <i class="stars__item is-active"></i>
+              <i class="stars__item"></i>
+              <i class="stars__item"></i>
+              <i class="stars__item"></i>
+            </div>
+          </div>
+
+          <div class="card__footer">
+            <a href="#" class="btn btn_primary card__btn">
+              В корзину
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide slider__slide">
+        ${require('../../common.blocks/card/card.html')}
+      </div>
+
+      <div class="swiper-slide slider__slide">
+        ${require('../../common.blocks/card/card.html')}
+      </div>
+
+      <div class="swiper-slide slider__slide">
+        ${require('../../common.blocks/card/card.html')}
+      </div>
+
+      <div class="swiper-slide slider__slide">
+        ${require('../../common.blocks/card/card.html')}
+      </div>
+
+      <div class="swiper-slide slider__slide">
+        ${require('../../common.blocks/card/card.html')}
+      </div>
+    </div>
+
+    <div class="slider__swiper-pagination"></div>
+  </div>
+
+  <div class="slider__swiper-button-prev">
+    <svg class="icon icon_size-10 icon_color-primary">
+      <use xlink:href="#arrow-short"></use>
+    </svg>
+  </div>
+
+  <div class="slider__swiper-button-next">
+    <svg class="icon icon_size-10 icon_color-primary">
+      <use xlink:href="#arrow-short"></use>
+    </svg>
+  </div>
+</div>

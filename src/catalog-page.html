@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main main_indent">
+      <nav class="breadcrumbs hidden-mobile">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a href="catalog-page.html" class="breadcrumbs__link is-active">Каталог</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="page-section">
+        <div class="container">
+          <h1 class="title title_h1 title_indent-l hidden-mobile">Каталог</h1>
+
+          <div class="grid grid_inner">
+            <div class="grid__wrapper">
+
+              <div class="grid__aside">
+                <div class="catalog">
+                  <ul class="catalog__list">
+                    <li class="catalog__item">
+                      <a href="catalog-page-1.html" class="catalog__link">
+                        <!-- если нужен красный цвет - нвесить модификатор catalog__text_colored -->
+                        <span class="catalog__text">Для лица</span>
+                        <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="catalog__item">
+                      <a href="catalog-page-1.html" class="catalog__link">
+                        <span class="catalog__text">Для тела</span>
+                        <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="catalog__item">
+                      <a href="catalog-page-1.html" class="catalog__link">
+                        <span class="catalog__text">Декоративная
+                          косметика</span>
+                        <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="catalog__item">
+                      <a href="catalog-page-1.html" class="catalog__link">
+                        <span class="catalog__text">Для волос</span>
+                        <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="catalog__item">
+                      <a href="catalog-page-1.html" class="catalog__link">
+                        <span class="catalog__text">Ароматерапия</span>
+                        <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="catalog__item">
+                      <a href="catalog-page-1.html" class="catalog__link">
+                        <span class="catalog__text">Уход за полостью
+                          рта</span>
+                        <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="catalog__item">
+                      <a href="catalog-page-1.html" class="catalog__link">
+                        <span class="catalog__text">Для мужчин</span>
+                        <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="catalog__item">
+                      <a href="catalog-page-1.html" class="catalog__link">
+                        <span class="catalog__text">Санитайзеры</span>
+                        <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="catalog__item">
+                      <a href="catalog-page-1.html" class="catalog__link">
+                        <span class="catalog__text">Солнцезащита</span>
+                        <svg class="icon icon_size-16 icon_color-dark icon_ml-16 catalog__svg">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="grid__main hidden-mobile">
+                <div class="chapter-grid chapter-grid_inner">
+                  <a href="#" class="chapter-grid__item">
+                    <picture class="chapter-grid__picture">
+                      <source media="(max-width: 1024px)" type="image/webp" srcset="/img/ch-3-m.webp">
+                      <source srcset="/img/ch-3.webp" type="image/webp" class="chapter-grid__img">
+                      <img src="/img/ch-3.jpg" alt="#" class="chapter-grid__img">
+                    </picture>
+                  </a>
+
+                  <a href="#" class="chapter-grid__item">
+                    <picture class="chapter-grid__picture">
+                      <source media="(max-width: 1024px)" type="image/webp" srcset="/img/ch-3-m.webp">
+                      <source srcset="/img/ch-3.webp" type="image/webp" class="chapter-grid__img">
+                      <img src="/img/ch-3.jpg" alt="#" class="chapter-grid__img">
+                    </picture>
+                  </a>
+
+                  <a href="#" class="chapter-grid__item">
+                    <picture class="chapter-grid__picture">
+                      <source media="(max-width: 1024px)" type="image/webp" srcset="/img/ch-3-m.webp">
+                      <source srcset="/img/ch-3.webp" type="image/webp" class="chapter-grid__img">
+                      <img src="/img/ch-3.jpg" alt="#" class="chapter-grid__img">
+                    </picture>
+                  </a>
+
+                  <a href="#" class="chapter-grid__item">
+                    <picture class="chapter-grid__picture">
+                      <source media="(max-width: 1024px)" type="image/webp" srcset="/img/ch-3-m.webp">
+                      <source srcset="/img/ch-3.webp" type="image/webp" class="chapter-grid__img">
+                      <img src="/img/ch-3.jpg" alt="#" class="chapter-grid__img">
+                    </picture>
+                  </a>
+
+                  <a href="#" class="chapter-grid__item">
+                    <picture class="chapter-grid__picture">
+                      <source media="(max-width: 1024px)" type="image/webp" srcset="/img/ch-3-m.webp">
+                      <source srcset="/img/ch-3.webp" type="image/webp" class="chapter-grid__img">
+                      <img src="/img/ch-3.jpg" alt="#" class="chapter-grid__img">
+                    </picture>
+                  </a>
+
+                  <a href="#" class="chapter-grid__item">
+                    <picture class="chapter-grid__picture">
+                      <img src="https://dummyimage.com/290x290/000/fff" alt="#" class="chapter-grid__img">
+                    </picture>
+                  </a>
+
+                  <a href="#" class="chapter-grid__item">
+                    <picture class="chapter-grid__picture">
+                      <img src="https://dummyimage.com/290x290/000/fff" alt="#" class="chapter-grid__img">
+                    </picture>
+                  </a>
+
+                  <a href="#" class="chapter-grid__item">
+                    <picture class="chapter-grid__picture">
+                      <img src="https://dummyimage.com/290x290/000/fff" alt="#" class="chapter-grid__img">
+                    </picture>
+                  </a>
+
+                  <a href="#" class="chapter-grid__item">
+                    <picture class="chapter-grid__picture">
+                      <img src="https://dummyimage.com/290x290/000/fff" alt="#" class="chapter-grid__img">
+                    </picture>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-section hidden-mobile">
+        <div class="container">
+          <div class="user-content">
+            <h1>Organic Zone - интернет магазин
+              натуральной косметики</h1>
+
+            <p>
+              История компании началась с любви её создателей к естественной красоте, природе, всему живому
+              и натуральному.
+            </p>
+
+            <p>
+              Идеологи Levrana — Леонид и Виктория из Санкт-Петербурга.
+            </p>
+
+            <p>
+              В 2013 году пара готовилась к рождению дочери и решила осознанно подойти к выбору средств по уходу
+              за малышом. Так
+              Леонид и Виктория изготовили первое натуральное мыло для собственного пользования. Тогда они не знали, что
+              это послужит
+              отправной точкой к чему-то большему и такому важному. Важному не только для самих себя, но и для многих
+              людей, которые
+              задумываются о своём здоровье и о состоянии окружающей среды.
+            </p>
+
+            <picture>
+              <source srcset="${require('./assets/img/user-content/image.webp')}" type="image/webp">
+
+              <img src="${require('./assets/img/user-content/image.jpg')}" alt="#">
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <div class="subscription hidden-mobile">
+        <div class="container">
+          <div class="subscription__wrapper">
+            <h2 class="subscription__title">Узнавайте первыми о наших скидках и предложениях!</h2>
+            <form method="post" class="form">
+              <div class="subscription__form-wrapper">
+                <div class="subscription__form-item">
+                  <input type="email" placeholder="Введите e-mail" aria-required="true"
+                    class="subscription__form-input">
+                  <div class="help-block"></div>
+                </div>
+
+                <div class="subscription__form-item">
+                  <button type="submit" class="btn btn_secondary">
+                    Подписаться
+                  </button>
+                </div>
+
+                <div class="subscription__form-item">
+
+                  <label class="form__label-checkbox">
+                    <input class="form__checkbox" type="checkbox">
+
+                    <span class="form__checkbox-text">Согласен с условиями</span>
+
+                    <a href="#" class="form__link">условиями оферты,</a>
+                    и&nbsp;
+                    <a href="#" class="form__link">политикой конфиденциальности</a>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer hidden-mobile">
+      <div class="container">
+        <div class="footer__top">
+
+          <a href="/" class="footer__logo">
+            <svg class="footer__logo-svg">
+              <use xlink:href="#logo-default"></use>
+            </svg>
+          </a>
+
+          <div class="footer__social hidden-desktop">
+            <a href="#" class="footer__social-link">
+              <svg class="icon icon_size-32">
+                <use xlink:href="#fb"></use>
+              </svg>
+            </a>
+
+            <a href="#" class="footer__social-link">
+              <svg class="icon icon_size-32">
+                <use xlink:href="#vk"></use>
+              </svg>
+            </a>
+
+            <a href="#" class="footer__social-link">
+              <svg class="icon icon_size-32">
+                <use xlink:href="#insta"></use>
+              </svg>
+            </a>
+          </div>
+
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item ">
+              <div class="footer__nav-title js-open-nav">
+                Каталог
+
+                <svg class="footer__nav-svg icon icon_size-20 icon_color-dark">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </div>
+              <ul class="footer__link-list footer__link-list_columns">
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Для лица</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Для тела</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Декоративная косметика</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Для волос</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Ароматеропия</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Уход за полостью рта</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Для мужчин</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Солнцезащита</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Санирайзеры</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link footer__link_colored">Скидки</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="footer__nav-item ">
+              <div class="footer__nav-title js-open-nav">
+                О компании
+
+                <svg class="footer__nav-svg icon icon_size-20 icon_color-dark">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </div>
+
+              <ul class="footer__link-list">
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">О OrganicZone</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Бренды</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Сотрудничество</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Вакансии</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="footer__nav-item ">
+              <div class="footer__nav-title js-open-nav">
+                Клиентам
+
+                <svg class="footer__nav-svg icon icon_size-20 icon_color-dark">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+              </div>
+
+              <ul class="footer__link-list">
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Доставка</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Оплата</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Возврат и обмен</a>
+                </li>
+
+                <li class="footer__link-item">
+                  <a href="#" class="footer__link">Помощь</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="footer__address hidden-mobile">
+            <a href="tel:88412235015" class="footer__address-item">
+              8 (495) 955-90-05
+            </a>
+
+            <a href="tel:88412235015" class="footer__address-item">
+              8 (800) 555-35-35
+            </a>
+
+            <span class="footer__address-desc">
+              бесплатный звонок
+              по России
+            </span>
+          </div>
+        </div>
+
+        <div class="footer__info">
+          <div class="footer__info-pay">
+            <div class="footer__info-heading hidden-mobile">Принимает к оплате:</div>
+
+            <svg class="icon icon_size-53 icon_mr-8">
+              <use xlink:href="#visa"></use>
+            </svg>
+
+            <svg class="icon icon_size-53 icon_mr-8">
+              <use xlink:href="#visa-electron"></use>
+            </svg>
+
+            <svg class="icon icon_size-53 icon_mr-8">
+              <use xlink:href="#mastercard"></use>
+            </svg>
+          </div>
+
+          <div class="footer__social hidden-mobile">
+            <div class="footer__info-heading hidden-mobile">Соц. сети</div>
+
+            <a href="#" class="footer__social-link">
+              <svg class="icon icon_size-32">
+                <use xlink:href="#fb"></use>
+              </svg>
+            </a>
+
+            <a href="#" class="footer__social-link">
+              <svg class="icon icon_size-32">
+                <use xlink:href="#vk"></use>
+              </svg>
+            </a>
+
+            <a href="#" class="footer__social-link">
+              <svg class="icon icon_size-32">
+                <use xlink:href="#insta"></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer__info-policy">
+            <a href="#" class="footer__policy-link">Пользовательское сообщение</a>
+            <a href="#" class="footer__policy-link">Политика обработки персональных данных</a>
+          </div>
+
+          <div class="footer__dev">
+            Сделано в
+            <a href="#" class="footer__dev-link">
+              Онлайнбиз
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OZ! OrganicZone</title>
+
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="//points.boxberry.ru/js/boxberry.js"> </script>
+
+  <script id="ISDEKscript" type="text/javascript" src="https://widget.cdek.ru/widget/widjet.js" charset="utf-8"></script>
+</head>
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">Оформление заказа</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="page-section">
+          <h1 class="title title_h1 title_indent-l">Оформление заказа</h1>
+
+          <div class="grid">
+            <delivery-order
+              :user-info="{
+                name: 'Иван',
+                surname: 'Иванов',
+                email: 'ivanov@team.ru',
+                tel: '+7 (927) 649 48 27',
+              }"
+            ></delivery-order>
+            <!-- <div class="grid__wrapper grid__wrapper_revers-inner">
+              <div class="grid__aside grid__aside_revers-inner basket">
+                <div class="basket__info">
+                  <h3 class="title title_h3 title_indent-sm">Ваш заказ</h3>
+
+                  <ul class="basket__info-body">
+                    <li class="basket__info-item">
+                      <dl class="basket__info-props">
+                        <dt>
+                          Товары
+                          <span>(3)</span>
+                        </dt>
+
+                        <dd>1 343 899 ₽</dd>
+                      </dl>
+                    </li>
+
+                    <li class="basket__info-item">
+                      <dl class="basket__info-props">
+                        <dt>Общий вес</dt>
+
+                        <dd>0.18 кг</dd>
+                      </dl>
+                    </li>
+
+                    <li class="basket__info-item">
+                      <dl class="basket__info-props">
+                        <dt>Скидка</dt>
+
+                        <dd>– 1 545 433 ₽</dd>
+                      </dl>
+                    </li>
+
+                    <li class="basket__info-item">
+                      <dl class="basket__info-props">
+                        <dt>Доставка</dt>
+
+                        <dd>202 ₽</dd>
+                      </dl>
+                    </li>
+
+                    <li class="basket__info-item">
+                      <dl class="basket__info-props">
+                        <dt>
+                          <strong>Итого</strong>
+                        </dt>
+
+                        <dd>
+                          <strong>2 999 999 ₽</strong>
+                        </dd>
+                      </dl>
+                    </li>
+                  </ul>
+
+                  <a href="basket-page.html" class="btn btn_primary btn_fill">Перейти к оплате</a>
+                </div>
+              </div>
+
+              <div class="grid__main grid__main_revers-inner">
+                <div class="order">
+                  <form class="form">
+                    <ol class="order__list">
+                      <li class="order__item">
+                        <div class="order__step-title">Регион доставки</div>
+
+                        <div class="order__step-content">
+                          <div class="form__group">
+                            <search-cities></search-cities>
+                          </div>
+
+                          <div class="form__group">
+                            <button class="btn btn_secondary">Изменить город</button>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="order__item">
+                        <div class="order__step-title">Способ доставки</div>
+
+                        <div class="order__step-content">
+                          <div class="order__delivery">
+                            <ul class="order__delivery-list">
+                              <li class="order__delivery-item">
+                                <label class="order__delivery-label">
+                                  <input name="order-delivery" type="radio" class="order__delivery-input">
+
+                                  <span class="order__delivery-radio"></span>
+
+                                  <svg class="icon icon_size-24 icon_mr-8">
+                                    <use xlink:href="#cdek"></use>
+                                  </svg>
+                                  <span class="order__delivery-company">СДЭК</span>
+                                </label>
+
+                                <div class="order__delivery-info">
+                                  <div class="order__delivery-conditions">
+                                    <span class="order__delivery-price">350 руб</span>
+                                    <span class="order__delivery-date">срок неизвестен</span>
+                                  </div>
+
+                                  <button class="order__delivery-btn btn btn_primary btn_tiny">
+                                    Выбрать пункт выдачи
+                                  </button>
+
+                                  <div class="order__delivery-address">г. Пенза ул. Проспект Победы 223а</div>
+                                </div>
+                              </li>
+
+                              <li class="order__delivery-item">
+                                <label class="order__delivery-label">
+                                  <input name="order-delivery" type="radio" class="order__delivery-input">
+
+                                  <span class="order__delivery-radio"></span>
+
+                                  <svg class="icon icon_size-24 icon_mr-8">
+                                    <use xlink:href="#russian-post"></use>
+                                  </svg>
+                                  <span class="order__delivery-company">Почта России</span>
+                                </label>
+
+                                <div class="order__delivery-info">
+                                  <div class="order__delivery-conditions">
+                                    <span class="order__delivery-price">350 руб</span>
+                                    <span class="order__delivery-date">до 19 октября</span>
+                                  </div>
+
+                                  <button class="order__delivery-btn btn btn_primary btn_tiny">
+                                    Выбрать пункт выдачи
+                                  </button>
+
+                                  <div class="order__delivery-address">г. Пенза ул. Проспект Победы 223а</div>
+                                </div>
+                              </li>
+
+                              <li class="order__delivery-item">
+                                <label class="order__delivery-label">
+                                  <input name="order-delivery" type="radio" class="order__delivery-input">
+
+                                  <span class="order__delivery-radio"></span>
+
+                                  <svg class="icon icon_size-24 icon_mr-8">
+                                    <use xlink:href="#boxberry"></use>
+                                  </svg>
+                                  <span class="order__delivery-company">Boxberry</span>
+                                </label>
+
+                                <div class="order__delivery-info">
+                                  <div class="order__delivery-conditions">
+                                    <span class="order__delivery-price">350 руб</span>
+                                    <span class="order__delivery-date">срок неизвестен</span>
+                                  </div>
+
+                                  <button class="order__delivery-btn btn btn_primary btn_tiny">
+                                    Выбрать пункт выдачи
+                                  </button>
+
+                                  <div class="order__delivery-address">г. Пенза ул. Проспект Победы 223а</div>
+                                </div>
+                              </li>
+
+                              <li class="order__delivery-item">
+                                <label class="order__delivery-label">
+                                  <input name="order-delivery" type="radio" class="order__delivery-input">
+
+                                  <span class="order__delivery-radio"></span>
+
+                                  <svg class="icon icon_size-24 icon_mr-8">
+                                    <use xlink:href="#icon-box"></use>
+                                  </svg>
+                                  <span class="order__delivery-company">Самовывоз из магазина (только для г.
+                                    Пенза)</span>
+                                </label>
+
+                                <div class="order__delivery-info">
+                                  <button class="order__delivery-btn btn btn_primary btn_tiny">
+                                    Выбрать пункт выдачи
+                                  </button>
+
+                                  <div class="order__delivery-address">г. Пенза ул. Проспект Победы 223а</div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="order__item">
+                        <div class="order__step-title">Способ оплаты</div>
+
+                        <div class="order__step-content">
+                          <div class="pay-options">
+                            <div class="pay-options__group">
+                              <input name="pay-option" checked type="radio" id="pay-1" class="pay-options__option">
+
+                              <label for="pay-1" class="pay-options__label"></label>
+
+                              <div class="pay-options__heading">
+                                Оплата на сайте банковской картой
+                              </div>
+
+                              <ul class="pay-options__cards">
+                                <li class="pay-options__card">
+                                  <svg class="pay-options__icon">
+                                    <use xlink:href="#mir-2"></use>
+                                  </svg>
+                                </li>
+
+                                <li class="pay-options__card">
+                                  <svg class="pay-options__icon">
+                                    <use xlink:href="#visa-2"></use>
+                                  </svg>
+                                </li>
+
+                                <li class="pay-options__card">
+                                  <svg class="pay-options__icon">
+                                    <use xlink:href="#mastercard-2"></use>
+                                  </svg>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="pay-options__group">
+                              <input name="pay-option" type="radio" id="pay-2" class="pay-options__option">
+
+                              <label for="pay-2" class="pay-options__label"></label>
+
+                              <div class="pay-options__heading">
+                                Оплата при получении
+                              </div>
+
+                              <div class="pay-options__desc">
+                                Банковской картой или наличными
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="order__item">
+                        <div class="order__step-title">Получатель</div>
+
+                        <div class="order__step-content">
+                          <div class="form__group">
+                            <label class="form__label form__label_block">Ф. И. О получателя
+                              <span class="form__label-decor">*</span>
+                            </label>
+
+                            <input type="text" class="form__input" placeholder="Ф. И. О">
+                          </div>
+
+                          <div class="form__group">
+                            <label class="form__label form__label_block">E-mail
+                              <span class="form__label-decor">*</span>
+                            </label>
+
+                            <input type="email" class="form__input" placeholder="E-mail">
+                          </div>
+
+                          <div class="form__group form__group_line">
+                            <span>
+                              <label class="form__label">Телефон
+                                <span class="form__label-decor">*</span>
+                              </label>
+
+                              <input type="tel" class="form__input form__input_indent" placeholder="Телефон">
+                            </span>
+
+                            <button type="button" class="btn btn_primary btn_fill">Получить код</button>
+                          </div>
+
+                          <div class="form__group">
+                            <label class="form__label form__label_block">Комментарий к заказу</label>
+
+                            <textarea class="form__input form__input_textarea"
+                              placeholder="Вы можете написать уточнение к заказу">
+                            </textarea>
+                          </div>
+
+                          <div class="form__group">
+                            <label class="form__label-checkbox">
+                              <input type="checkbox" class="form__checkbox">
+                              <span class="form__checkbox-text">Согласен с
+                                <a href="#" class="form__link">условиями оферты,</a>и
+                                <a href="#" class="form__link">политикой конфиденциальности</a>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div class="form__group">
+                            <label class="form__label-checkbox">
+                              <input type="checkbox" class="form__checkbox">
+                              <span class="form__checkbox-text">
+                                Свяжитесь со мной по телефону для уточнения подробностей по заказу
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                  </form>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      ${require('./common.blocks/subscription/subscription.html')}
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+    ${require('./common.blocks/popup-remove-from-basket/popup-remove-from-basket.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>

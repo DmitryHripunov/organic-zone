@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+${require('./common.blocks/head/head.html')}
+
+<body class="body">
+  <div id="app">
+    ${require('./common.blocks/header/header.html')}
+
+    <main class="main">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/" class="breadcrumbs__link">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link is-active">Поиск</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="page-section">
+          <h1 class="title title_h1 title_indent-sm">Результаты поиска</h1>
+
+          <div class="page-section page-section_middle">
+            <div class="form form_middle">
+              <div class="form__group">
+                <input placeholder="Гель для душа" type="search" class="form__input form__input_padding-right">
+  
+                <button type="submit" class="form__search-btn form__search-btn_colored">
+                  <svg class="icon icon_size-20 icon_color-white">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="form__group">
+                <!-- begin results  -->
+                <p class="form__desc">
+                  По запросу <span>Гель для душа</span> найдено  <span>159</span> товара
+                </p>
+                <!-- end results -->
+
+                <!-- begin no results  -->
+                <!-- <p class="form__desc">
+                  По вашему запросу ничего не найдено. Попробуйте изменить формулировку
+                  или воспользуйтесь нашим каталогом.
+                </p> -->
+                <!-- end no results  -->
+              </div>
+
+              <!-- begin no results  -->
+              <!-- <div class="form__group">
+                <a href="/catalog-page.html" class="btn btn_primary btn_middle">В каталог</a>
+              </div> -->
+              <!-- end no results  -->
+            </div>
+          </div>
+
+          <!-- begin results  -->
+          <div class="top-bar">
+            <div class="top-bar__mobile ">
+              <div class="top-bar__mobile-wrapper">
+                <div class="top-bar__popular">
+                  <button data-target="#action-popular-products" class="top-bar__popular-action js-dropdown-btn">
+                    Сначала новые
+                    <svg class="icon icon_size-12 icon_color-black icon_ml-8">
+                      <use xlink:href="#triangle"></use>
+                    </svg>
+                  </button>
+
+                  <div id="action-popular-products"
+                    class="top-bar__popular-dropdown top-bar__popular-dropdown_right js-item-dropdown">
+                    <div class="dropdown">
+                      <ul class="dropdown__list">
+                        <li class="dropdown__item"><a href="/" class="dropdown__link">Популярные</a></li>
+                        <li class="dropdown__item"><a href="#" class="dropdown__link">Новинки</a></li>
+                        <li class="dropdown__item"><a href="#" class="dropdown__link">Сначала дешевые</a></li>
+                        <li class="dropdown__item"><a class="dropdown__link">Сначала дорогие</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="top-bar__desktop">
+              <ul class="top-bar__desktop-list">
+                <li class="top-bar__desktop-item">
+                  <a href="#" class="top-bar__desktop-link is-active">Популярные</a>
+                </li>
+
+                <li class="top-bar__desktop-item">
+                  <a href="#" class="top-bar__desktop-link">Дешевые</a>
+                </li>
+
+                <li class="top-bar__desktop-item">
+                  <a href="#" class="top-bar__desktop-link">Дорогие</a>
+                </li>
+
+                <li class="top-bar__desktop-item">
+                  <a href="#" class="top-bar__desktop-link">Высокая оценка</a>
+                </li>
+
+                <li class="top-bar__desktop-item">
+                  <a href="#" class="top-bar__desktop-link">Скидки</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-grid section-grid_spread">
+            <ul class="section-grid__list">
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+              <li class="section-grid__item">
+                ${require('./common.blocks/card/card.html')}
+              </li>
+            </ul>
+          </div>
+
+          ${require('./common.blocks/pagination/pagination.html')}
+          <!-- end results -->
+
+
+          <!-- begin no results  -->
+          <!-- ${require('./common.blocks/slider-inline/slider-inline.html')} -->
+          <!-- end no results  -->
+        </div>
+      </div>
+    </main>
+
+    ${require('./common.blocks/footer/footer.html')}
+    ${require('./common.blocks/mobile-panel/mobile-panel.html')}
+
+    ${require('./common.blocks/popup-choice-city/popup-choice-city.html')}
+    ${require('./common.blocks/popup-log-in/popup-log-in.html')}
+  </div>
+
+  ${require('./common.blocks/initial-state/initial-state.html')}
+</body>
+
+</html>
